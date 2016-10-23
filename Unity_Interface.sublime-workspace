@@ -1,0 +1,1270 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Asi",
+				"AsiaHaptics_DemoApp/"
+			],
+			[
+				"As",
+				"AsiaHaptics_DemoApp/"
+			],
+			[
+				"AS",
+				"AsiaHaptics_DemoApp/"
+			],
+			[
+				"vec",
+				"Vector3\tVector3"
+			],
+			[
+				"Vector",
+				"Vector3\tVector3"
+			],
+			[
+				"Star",
+				"StartRecording()\tvoid"
+			],
+			[
+				"Pad",
+				"PadClicked\tPadClicked"
+			],
+			[
+				"right",
+				"rightDevice\tSteamVR_TrackedController"
+			],
+			[
+				"Stea",
+				"SteamVR_TrackedController\tSteamVR_TrackedController"
+			],
+			[
+				"Steam",
+				"SteamVR_TrackedObject\tSteamVR_TrackedObject"
+			],
+			[
+				"Chi",
+				"Child(string name)\tGameObject"
+			],
+			[
+				"Uni",
+				"Unity\tUnity"
+			],
+			[
+				"SteamVR_Tra",
+				"SteamVR_TrackedController\tSteamVR_TrackedController"
+			],
+			[
+				"From",
+				"FromMinutes(double value)\tTimeSpan"
+			],
+			[
+				"AddTo",
+				"AddTo<T>(GameObject gameObject)\tT"
+			],
+			[
+				"time",
+				"Timer(TimeSpan dueTime)\tIObservable<long>"
+			],
+			[
+				"f",
+				"forward\tVector3 { get; set; }"
+			],
+			[
+				"Vector3",
+				"Vector3(float x, float y, float z)\tVector3(float x, float y, float z)"
+			],
+			[
+				"ri",
+				"Rigidbody\tRigidbody"
+			],
+			[
+				"Vec",
+				"Vector3(float x, float y, float z)\tVector3(float x, float y, float z)"
+			],
+			[
+				"Instanti",
+				"Instantiate(Object original, Vector3 position, Quaternion rotation, Transform parent)\tObject"
+			],
+			[
+				"_",
+				"_voiceObjectPrefab\tGameObject"
+			],
+			[
+				"su",
+				"Subscribe(Action<T> onNext)\tIDisposable"
+			],
+			[
+				"Is",
+				"IsTransmitting\tbool { get; }"
+			],
+			[
+				"PhotonVoi",
+				"PhotonVoiceRecorder\tPhotonVoiceRecorder"
+			],
+			[
+				"photon",
+				"PhotonVoiceRecorder\tPhotonVoiceRecorder"
+			],
+			[
+				"ow",
+				"owner\tPhotonPlayer { get; }"
+			],
+			[
+				"PhotonVi",
+				"photonView\tPhotonView { get; }"
+			],
+			[
+				"photonVoi",
+				"PhotonVoiceSpeaker\tPhotonVoiceSpeaker"
+			],
+			[
+				"GvrAudioS",
+				"GvrAudioSource\tGvrAudioSource"
+			],
+			[
+				"GvrA",
+				"GvrAudioListener\tGvrAudioListener"
+			],
+			[
+				"Find",
+				"FindChild(string name)\tTransform"
+			],
+			[
+				"Phot",
+				"PhotonNetwork\tPhotonNetwork"
+			],
+			[
+				"pla",
+				"playerName\tstring { get; set; }"
+			],
+			[
+				"player",
+				"PhotonPlayer\tPhotonPlayer"
+			],
+			[
+				"photo",
+				"PhotonPlayer\tPhotonPlayer"
+			],
+			[
+				"Fi",
+				"FindChild(string name)\tTransform"
+			],
+			[
+				"getc",
+				"GetComponent<T>()\tT"
+			],
+			[
+				"cam",
+				"camera\tComponent { get; }"
+			],
+			[
+				"find",
+				"FindChild(string name)\tTransform"
+			],
+			[
+				"came",
+				"Camera\tCamera"
+			],
+			[
+				"pho",
+				"PhotonView\tPhotonView"
+			],
+			[
+				"id",
+				"ownerId\tint"
+			],
+			[
+				"getcomponents",
+				"GetComponentsInChildren<T>()\tT[]"
+			],
+			[
+				"po",
+				"position\tVector3 { get; set; }"
+			],
+			[
+				"instan",
+				"Instantiate(string prefabName, Vector3 position, Quaternion rotation, int group)\tGameObject"
+			],
+			[
+				"room",
+				"roomOptions\tRoomOptions"
+			],
+			[
+				"Room",
+				"RoomOptions()\tRoomOptions()"
+			],
+			[
+				"Le",
+				"LeaveRoom()\tbool"
+			],
+			[
+				"p",
+				"NetworkedPlayer.cs"
+			],
+			[
+				"Int",
+				"Int32\tInt32"
+			],
+			[
+				"Unity",
+				"UnityEngine\tUnityEngine"
+			],
+			[
+				"GetComponent",
+				"GetComponent<T>()\tT"
+			],
+			[
+				"Load",
+				"LoadLevel(string levelName)\tvoid"
+			],
+			[
+				"join",
+				"JoinOrCreateRoom(string roomName, RoomOptions roomOptions, TypedLobby typedLobby)\tbool"
+			],
+			[
+				"version",
+				"ConnectUsingSettings(string gameVersion)\tbool"
+			],
+			[
+				"Log",
+				"LogFeedback(string message)\tvoid"
+			],
+			[
+				"se",
+				"SceneManagement\tSceneManagement"
+			],
+			[
+				"game",
+				"GameObject\tGameObject"
+			],
+			[
+				"sett",
+				"PhotonServerSettings\tServerSettings"
+			],
+			[
+				"Ne",
+				"NetworkedPlayer.cs"
+			],
+			[
+				"Instantiate",
+				"Instantiate(string prefabName, Vector3 position, Quaternion rotation, int group)\tGameObject"
+			],
+			[
+				"Photon",
+				"PhotonNetwork\tPhotonNetwork"
+			],
+			[
+				"ve",
+				"VRVoiceChatDemo.sln"
+			],
+			[
+				"ma",
+				"Max(int a, int b)\tint"
+			],
+			[
+				"digita",
+				"digitalWrite\tArduino digitalWrite"
+			],
+			[
+				"analog",
+				"analogWrite\tArduino analogWrite"
+			],
+			[
+				"rcv",
+				"rcvLong"
+			],
+			[
+				"_udp",
+				"_udpSender\tUdpSender"
+			],
+			[
+				"colli",
+				"Collision\tCollision"
+			],
+			[
+				"IPE",
+				"IPEndPoint\tIPEndPoint"
+			],
+			[
+				"w",
+				"Write(string message)\tvoid"
+			],
+			[
+				"analo",
+				"analogWrite\tArduino analogWrite"
+			],
+			[
+				"in",
+				"InverseTransformPoint(Vector3 position)\tVector3"
+			],
+			[
+				"log",
+				"Log(object message)\tvoid"
+			],
+			[
+				"coll",
+				"collision\tCollision"
+			],
+			[
+				"Co",
+				"Collision\tCollision"
+			],
+			[
+				"MEs",
+				"MeshCollider\tMeshCollider"
+			],
+			[
+				"Get",
+				"GetComponent<T>()\tT"
+			],
+			[
+				"add",
+				"AddForce(float x, float y, float z, ForceMode mode)\tvoid"
+			],
+			[
+				"get",
+				"GetComponent<T>()\tT"
+			],
+			[
+				"ob",
+				"GameObject\tGameObject"
+			],
+			[
+				"Ke",
+				"KeyCode\tKeyCode"
+			],
+			[
+				"u",
+				"tty.usbmodem1411"
+			],
+			[
+				"tty",
+				"tty.usbmodem1411"
+			],
+			[
+				"if",
+				"ifelse\tGNUOct func"
+			],
+			[
+				"prin",
+				"printf\tGNUOct func"
+			],
+			[
+				"divise",
+				"divisionLeftX"
+			],
+			[
+				"divisi",
+				"divisionRightX"
+			],
+			[
+				"division",
+				"divisionHIghX"
+			],
+			[
+				"divisio",
+				"divisionHIgh"
+			],
+			[
+				"one",
+				"ones\tGNUOct func"
+			],
+			[
+				"Patter",
+				"PatternMatrix"
+			],
+			[
+				"Sie",
+				"size\tGNUOct func"
+			],
+			[
+				"Com",
+				"comet3\tGNUOct func"
+			],
+			[
+				"functi",
+				"function\tMatlab method"
+			],
+			[
+				"section",
+				"section\tsection"
+			],
+			[
+				"li",
+				"lstlisting"
+			],
+			[
+				"Li",
+				"List<\tList<"
+			],
+			[
+				"Text",
+				"TextField(Rect position, string text)\tstring"
+			],
+			[
+				"Senso",
+				"SensorStateBase\tSensorStateBase"
+			],
+			[
+				"IPA",
+				"IPAddress\tIPAddress"
+			],
+			[
+				"ke",
+				"KeyValuePair<\tKeyValuePair<"
+			],
+			[
+				"In",
+				"InputField\tInputField"
+			],
+			[
+				"Lo",
+				"Log(object message, Object context)\tvoid"
+			],
+			[
+				"r",
+				"TryParse(string s, out double result)\tbool"
+			],
+			[
+				"Encod",
+				"Encoding\tEncoding"
+			],
+			[
+				"getby",
+				"GetBytes(string s)\tbyte[]"
+			],
+			[
+				"IPEndPoin",
+				"IPEndPoint(IPAddress address, int port)\tIPEndPoint(IPAddress address, int port)"
+			],
+			[
+				"Udp",
+				"UdpState(IPEndPoint ep, byte[] udpData)\tUdpState(IPEndPoint ep, byte[] udpData)"
+			],
+			[
+				"UdpS",
+				"UdpState\tUdpState"
+			],
+			[
+				"co",
+				"Connect(IPEndPoint endPoint)\tvoid"
+			],
+			[
+				"coro",
+				"coroutine_\tCoroutine"
+			],
+			[
+				"Wi",
+				"Window(int id, Rect clientRect, WindowFunction func, string text)\tRect"
+			],
+			[
+				"send",
+				"send(string server, string message)\tIEnumerator"
+			],
+			[
+				"startco",
+				"StartCoroutine(string methodName)\tCoroutine"
+			],
+			[
+				"L",
+				"Log(object message, Object context)\tvoid"
+			],
+			[
+				"EP",
+				"EPTable\tDictionary<IPAddress, SensorStateBase> { get; set; }"
+			],
+			[
+				"for",
+				"foreach\tforeach"
+			],
+			[
+				"To",
+				"ToList()\tList<TSource>"
+			],
+			[
+				"Se",
+				"SensorState(ulong detectTime, SensorStateBase sb)\tSensorState(ulong detectTime, SensorStateBase sb)"
+			],
+			[
+				"Arg",
+				"ArgumentException\tArgumentException"
+			],
+			[
+				"Select",
+				"SelectMany(Func<TSource, IEnumerable<TCollection>> collectionSelector, Func<TSource, TCollection, TResult> resultSelector)\tIEnumerable<TResult>"
+			],
+			[
+				"Subs",
+				"Subscribe()\tIDisposable"
+			],
+			[
+				"DE",
+				"Debug\tDebug"
+			],
+			[
+				"Sen",
+				"SensorStateBase\tSensorStateBase"
+			],
+			[
+				"to",
+				"ToArray()\tTSource[]"
+			],
+			[
+				"M",
+				"Min()\tTSource"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Unity_Interface.sublime-project",
+			"settings":
+			{
+				"buffer_size": 45,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Kulture/ASP.NET.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "pac",
+		"selected_items":
+		[
+			[
+				"pac",
+				"Package Control: List Packages"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"pref",
+				"Preferences: Settings"
+			],
+			[
+				"package con",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"prefer",
+				"Preferences: Settings"
+			],
+			[
+				"package ",
+				"Package Control: Install Package"
+			],
+			[
+				"C",
+				"Set Syntax: C#"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"pytho",
+				"Set Syntax: Python"
+			],
+			[
+				"markd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"py",
+				"Set Syntax: Python"
+			],
+			[
+				"package control: up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"pyt",
+				"Set Syntax: Python"
+			],
+			[
+				"brow",
+				"OmniMarkupPreviewer: Preview Current Markup in Browser"
+			],
+			[
+				"browser",
+				"OmniMarkupPreviewer: Preview Current Markup in Browser"
+			],
+			[
+				"ma",
+				"Set Syntax: Markdown"
+			],
+			[
+				"user",
+				"Preferences: Settings - User"
+			],
+			[
+				"use",
+				"Preferences: Settings - User"
+			],
+			[
+				"relo",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"markdo",
+				"Set Syntax: Markdown"
+			],
+			[
+				"reload",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: List Unmanaged Packages"
+			],
+			[
+				"8",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"omni",
+				"OmniSharpSublime: Reload Solution"
+			],
+			[
+				"omnisha",
+				"OmniSharpSublime: Clean"
+			],
+			[
+				"ut",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"om",
+				"OmniMarkupPreviewer: Preview Current Markup in Browser"
+			],
+			[
+				"des",
+				"Origami: Destroy Current Pane"
+			],
+			[
+				"temp",
+				"LaTexTools: Delete temporary files"
+			],
+			[
+				"Dest",
+				"Origami: Destroy Current Pane"
+			],
+			[
+				"late",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"m",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"mat",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"origami",
+				"Origami: Destroy Current Pane"
+			],
+			[
+				"reloa",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"tem",
+				"LaTexTools: Delete temporary files"
+			],
+			[
+				"latex",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"convertto",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"c#",
+				"Set Syntax: C#"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"new fo",
+				"File: New View into File"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"matlab",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"tempora",
+				"LaTexTools: Delete temporary files"
+			],
+			[
+				"latextool",
+				"LaTeXTools: View PDF"
+			],
+			[
+				"tex",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"package control",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"setti",
+				"Preferences: Settings - User"
+			],
+			[
+				"upda",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"Packa",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"sett",
+				"Preferences: Settings - User"
+			],
+			[
+				"setting",
+				"Preferences: Settings - User"
+			],
+			[
+				"Package",
+				"Package Control: List Unmanaged Packages"
+			],
+			[
+				"Pack",
+				"Package Control: Install Package"
+			],
+			[
+				"C#",
+				"Set Syntax: C#"
+			],
+			[
+				"Package con",
+				"Package Control: Remove Package"
+			],
+			[
+				"markup",
+				"OmniMarkupPreviewer: Preview Current Markup in Browser"
+			],
+			[
+				"refere",
+				"Preferences: Settings - User"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package control: add",
+				"Package Control: Add Repository"
+			],
+			[
+				"Package control: Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"c++",
+				"Set Syntax: C++"
+			],
+			[
+				"Package control: Re",
+				"Package Control: Remove Repository"
+			],
+			[
+				"Package contro",
+				"Package Control: Install Package"
+			],
+			[
+				"Prefere",
+				"Project: Refresh Folders"
+			],
+			[
+				"Package Control: In",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"About"
+			]
+		],
+		"width": 503.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/takumiito/MyGit/Unity_Interface"
+	],
+	"file_history":
+	[
+		"/Users/takumiito/MyGit/AsiaHaptics/AsiaHaptics.sublime-project",
+		"/Users/takumiito/Google ドライブ/LectureNote/2016A/image_processing/image_processing_keyword.txt",
+		"/Users/takumiito/MyGit/Kototama_Unity/kototama/Assets/myAssets/Script/VoiceController.cs",
+		"/Users/takumiito/MyGit/Kototama_Unity/kototama/Assets/myAssets/Script/VoiceSphereController.cs",
+		"/Users/takumiito/MyGit/Kototama_Unity/kototama/Assets/SteamVR/Extras/SteamVR_TestThrow.cs",
+		"/Users/takumiito/MyGit/Kototama_Unity/kototama/Assets/myAssets/Script/SteamVR_FirstPersonController.cs",
+		"/Users/takumiito/MyGit/Kototama_Unity/kototama/Assets/myAssets/Script/SavWav.cs",
+		"/Users/takumiito/MyGit/Kototama_Unity/kototama/kototama.sublime-project",
+		"/Users/takumiito/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Users/takumiito/MyGit/gatarist_tool/Assets/myAssets/Scripts/pythonFromCSharp.cs",
+		"/Users/takumiito/MyGit/gatarist_tool/Assets/myAssets/Scripts/python/PythonTest.txt",
+		"/Users/takumiito/MyGit/gatarist_tool/Assets/PlayMaker/Editor/Install/readme.txt",
+		"/Users/takumiito/Google ドライブ/LectureNote/2016A/image_processing/20160927/20160927.markdown",
+		"/Users/takumiito/Desktop/sample.py",
+		"/Users/takumiito/MyGit/tensorflow/tensorflow/examples/tutorials/mnist/fully_connected_feed.py",
+		"/Users/takumiito/tmp/mnist_softmax.py",
+		"/Users/takumiito/Desktop/test.py",
+		"/Users/takumiito/Desktop/untitled.py",
+		"/Users/takumiito/Desktop/untitled.mdown",
+		"/Users/takumiito/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/takumiito/MyGit/Unity/AccordNetTest/AccordNetTest.sublime-project",
+		"/Users/takumiito/MyGit/Unity/SpeechToTextTest/Assets/SpeechToText/README.md",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/Assets/PUNVoice/Scripts/PhotonVoiceSpeaker.cs",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/Assets/MyAssets/Scripts/PlayerNameInputField.cs",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/Assets/MyAssets/Scripts/NetworkedPlayer.cs",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/Assets/MyAssets/Scripts/RoomManager.cs",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/Assets/MyAssets/Scripts/VoiceVisualizer.cs",
+		"/Users/takumiito/MyGit/Unity/SpeechToTextTest/Assets/SpeechToText/Scripts/SpeechToTextServices/SpeechToTextResults/WatsonTextAlternative.cs",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/Assets/MyAssets/Scripts/VoiceObjectController.cs",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/Assets/DebugScript.cs",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/Assets/PUNVoice/Scripts/PhotonVoiceRecorder.cs",
+		"/Users/takumiito/Desktop/私たちhogehogeはDaydreamプラットフォーム上で動作することを想定した、モバイル端末上で",
+		"/Users/takumiito/MyGit/CardboardVR/doc/paper/report.tex",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/Assets/MyAssets/Scripts/LobbyManager.cs",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/Assets/MyAssets/Scripts/SheetPosition.cs",
+		"/Users/takumiito/MyGit/Unity/PUNStudy/Assets/PUNVoice/DemoVoice/Scripts/ChangePOV.cs",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/Assets/MyAssets/Scripts/SheetPositionScript.cs",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/VRVoiceChatDemo.sublime-project",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/Assets/MyAssets/Scripts/SpaunController.cs",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/Assets/MyAssets/Scripts/SpawnController.cs",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/Assets/MyAssets/Scripts/NetworkController.cs",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/Assets/Photon Unity Networking/Demos/PunBasics-Tutorial/Scripts/PlayerManager.cs",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/Assets/NetworkController.cs",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/Assets/MyAssets/Scripts/NetworkManager.cs",
+		"/Users/takumiito/MyGit/Unity/VRVoiceChatDemo/Assets/UnityChan/Scripts/ThirdPersonCamera.cs",
+		"/Users/takumiito/MyGit/Unity/AsiaHaptics/ArduinoUDPConnetion/ArduinoUDPConnetion.ino",
+		"/Users/takumiito/MyGit/Unity/AsiaHaptics/Unity/AsiaHaptics/Assets/myAssets/Scripts/UdpSender.cs",
+		"/Users/takumiito/MyGit/Unity/AsiaHaptics/Unity/AsiaHaptics/Assets/myAssets/Scripts/MyController.cs",
+		"/Users/takumiito/MyGit/Unity/AsiaHaptics/Unity/AsiaHaptics/Assets/myAssets/Scripts/hogehoge.cs",
+		"/Users/takumiito/MyGit/Unity/AsiaHaptics/Unity/AsiaHaptics/Assets/myAssets/Scripts/SerialHandler.cs",
+		"/Users/takumiito/MyGit/Unity/AsiaHaptics/Unity/AsiaHaptics/Assets/myAssets/Scripts/UdpReceiverRx.cs",
+		"/Users/takumiito/MyGit/Unity/AsiaHaptics/ArduinoSketch/ArduinoSketch.ino",
+		"/Users/takumiito/Google ドライブ/LectureNote/2016S/utmc1/20160701/20160701.mdown",
+		"/Users/takumiito/Google ドライブ/LectureNote/2016S/ContentsTech/20160427.mdown",
+		"/Users/takumiito/MyGit/Unity/AsiaHaptics/Unity/AsiaHaptics/Assets/Standard Assets/Vehicles/Aircraft/Scripts/AeroplaneController.cs",
+		"/Users/takumiito/MyGit/Unity/AsiaHaptics/Unity/AsiaHaptics/Assets/BallScript.cs",
+		"/Users/takumiito/MyGit/Unity/AsiaHaptics/Unity/AsiaHaptics/Assets/Dijkstra.cs",
+		"/Users/takumiito/MyGit/Unity/AsiaHaptics/AsiaHaptics.sublime-project",
+		"/Users/takumiito/MyGit/Unity/AsiaHaptics/Assets/myAssets/Scripts/hogehoge.cs",
+		"/Users/takumiito/MyGit/Unity/AsiaHaptics/Assets/myAssets/Scripts/SerialHandler.cs",
+		"/Users/takumiito/Desktop/optimizationLecture/2ndSeason/Ex1/GreedyMethod.m",
+		"/Users/takumiito/Desktop/optimizationLecture/2ndSeason/Ex2/BranchAndBound.matlab",
+		"/Users/takumiito/Google ドライブ/LectureNote/2016S/UTMC1/20160520/20160520.mdown"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"FLAGS.summaries_dir",
+			"GvrAudioSource ",
+			"AudioSource",
+			"roomOptions",
+			"playerPosition",
+			"Spaun",
+			"gameVersion",
+			"textFeedback",
+			"\t\t\n",
+			"temp",
+			"baudRate",
+			"portName",
+			"MayFesVRApp",
+			"isSendingToPhoneEnabled",
+			"目的関数",
+			"Question3_SD",
+			"Question1_BFGS",
+			"Question2_FR",
+			"a_k",
+			"p_k",
+			"grad",
+			"Question2_SD",
+			"Question3_SD",
+			"x_2",
+			"x_1",
+			"x(2)",
+			"x(1)",
+			"Question2_SD",
+			"Question1_SD",
+			"High",
+			"Low",
+			"geqq",
+			"calcList",
+			"uint",
+			"Blocking",
+			"Net",
+			"sendMsg",
+			"udpClient",
+			"_udpStream",
+			"client",
+			"VRAppRx",
+			"UdpState",
+			"UDPTHreadStream",
+			"_udpThreadStream",
+			"UDPThreadStream",
+			"listenPort"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"_listenPort"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Unity_Interface.sublime-project",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 45,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										43,
+										44
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										0,
+										1
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 152.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.latextools":
+	{
+		"height": 138.0
+	},
+	"output.variable_get":
+	{
+		"height": 128.0
+	},
+	"pinned_build_system": "",
+	"project": "Unity_Interface.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"networked",
+				"Assets/MyAssets/Scripts/NetworkedPlayer.cs"
+			],
+			[
+				"playerna",
+				"Assets/MyAssets/Scripts/PlayerNameInputField.cs"
+			],
+			[
+				"photonvoicesp",
+				"Assets/PUNVoice/Scripts/PhotonVoiceSpeaker.cs"
+			],
+			[
+				"photonvoi",
+				"Assets/PUNVoice/Scripts/PhotonVoiceRecorder.cs"
+			],
+			[
+				"photonvoice",
+				"Assets/PUNVoice/Scripts/PhotonVoiceSpeaker.cs"
+			],
+			[
+				"dijk",
+				"Unity/AsiaHaptics/Assets/Dijkstra.cs"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 220.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

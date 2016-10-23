@@ -1,0 +1,24 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"*.meta"
+			],
+			"name": "Unity_Interface",
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"auto_complete_triggers":
+		[
+			{
+				"characters": ".<",
+				"selector": "source.cs"
+			}
+		]
+	},
+	"solution_file": "Unity_Interface.sln"
+}
