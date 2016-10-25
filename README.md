@@ -1,2 +1,3 @@
 # mrpmUI
-control interface for player robot made with Unity
+User Interface for player robot made with Unity
+Belongs to MRPM
