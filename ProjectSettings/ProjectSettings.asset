@@ -451,8 +451,13 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudServicesEnabled:
+    Build: 0
+    Collab: 1
+    ErrorHub: 0
+    Hub: 0
+    UNet: 1
+  cloudProjectId: e2b28238-6f76-4cce-b66c-7d349daaf3e8
+  projectName: MRPM_Interface
+  organizationId: takumi-ito
   cloudEnabled: 0
