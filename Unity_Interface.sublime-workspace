@@ -4,16 +4,48 @@
 		"selected_items":
 		[
 			[
+				"Inp",
+				"InputField\tInputField"
+			],
+			[
+				"set",
+				"SetNativeSize()\tvoid"
+			],
+			[
+				"te",
+				"textureNonReadable\tTexture2D { get; }"
+			],
+			[
+				"Get",
+				"GetString(string key)\tstring"
+			],
+			[
+				"loadL",
+				"LoadLevel(string name)\tvoid"
+			],
+			[
+				"get",
+				"GetString(string key)\tstring"
+			],
+			[
+				"Lo",
+				"LoadLevel(string name)\tvoid"
+			],
+			[
+				"Play",
+				"PlayerPrefs\tPlayerPrefs"
+			],
+			[
+				"pla",
+				"PlayerPrefs\tPlayerPrefs"
+			],
+			[
 				"game",
 				"gameObject\tGameObject { get; }"
 			],
 			[
 				"Game",
 				"GameStateManager\tGameStateManager"
-			],
-			[
-				"te",
-				"texture\tTexture2D { get; }"
 			],
 			[
 				"do",
@@ -188,10 +220,6 @@
 				"PhotonNetwork\tPhotonNetwork"
 			],
 			[
-				"pla",
-				"playerName\tstring { get; set; }"
-			],
-			[
 				"player",
 				"PhotonPlayer\tPhotonPlayer"
 			],
@@ -360,16 +388,8 @@
 				"MeshCollider\tMeshCollider"
 			],
 			[
-				"Get",
-				"GetComponent<T>()\tT"
-			],
-			[
 				"add",
 				"AddForce(float x, float y, float z, ForceMode mode)\tvoid"
-			],
-			[
-				"get",
-				"GetComponent<T>()\tT"
 			],
 			[
 				"ob",
@@ -464,10 +484,6 @@
 				"InputField\tInputField"
 			],
 			[
-				"Lo",
-				"Log(object message, Object context)\tvoid"
-			],
-			[
 				"r",
 				"TryParse(string s, out double result)\tbool"
 			],
@@ -498,22 +514,6 @@
 			[
 				"coro",
 				"coroutine_\tCoroutine"
-			],
-			[
-				"Wi",
-				"Window(int id, Rect clientRect, WindowFunction func, string text)\tRect"
-			],
-			[
-				"send",
-				"send(string server, string message)\tIEnumerator"
-			],
-			[
-				"startco",
-				"StartCoroutine(string methodName)\tCoroutine"
-			],
-			[
-				"L",
-				"Log(object message, Object context)\tvoid"
 			]
 		]
 	},
@@ -532,7 +532,16 @@
 			"file": "Assets/MyAssets/Scripts/GameStateManager.cs",
 			"settings":
 			{
-				"buffer_size": 521,
+				"buffer_size": 1009,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/MyAssets/Scripts/GET_Stream.cs",
+			"settings":
+			{
+				"buffer_size": 871,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
@@ -883,10 +892,16 @@
 	"expanded_folders":
 	[
 		"/Users/takumiito/MyGit/Unity_Interface",
-		"/Users/takumiito/MyGit/Unity_Interface/Assets"
+		"/Users/takumiito/MyGit/Unity_Interface/Assets",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets"
 	],
 	"file_history":
 	[
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/RasPiAddressInputScript.cs",
+		"/Users/takumiito/.ssh/known_hosts",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/RasPiAddressInputScript.cs",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/GameStateManager.cs",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/PlayerPrefs.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/ParamStorage.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/Get_Stream.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/UniWeb/Examples/UniWebExamples.cs",
@@ -1166,15 +1181,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 521,
+						"buffer_size": 1009,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								518,
-								518
+								213,
+								225
 							]
 						],
 						"settings":
@@ -1186,15 +1201,15 @@
 								{
 									"1":
 									[
-										517,
-										518
+										225,
+										226
 									]
 								},
 								"icon":
 								{
 									"1":
 									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"Packages/BracketHighlighter/icons/double_quote.png",
 										"brackethighlighter.default"
 									]
 								},
@@ -1202,9 +1217,121 @@
 								{
 									"1":
 									[
-										492,
-										493
+										212,
+										213
 									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"is_init_dirty_state": false,
+							"oops":
+							{
+								"0,5": "Using directive is not used by code and can be removed safely.",
+								"191,209": "Convert to readonly",
+								"26,31": "Using directive is not used by code and can be removed safely.",
+								"262,270": "Name should have prefix '_'. (Rule 'Fields').",
+								"505,511": "Method 'Update' has the same with 'Start'"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/MyAssets/Scripts/GET_Stream.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 871,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								66,
+								66
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
 								},
 								"unmatched":
 								{
@@ -1268,22 +1395,20 @@
 								"bh_round_close",
 								"bh_round_content"
 							],
+							"is_init_dirty_state": false,
 							"oops":
 							{
-								"0,5": "Using directive is not used by code and can be removed safely.",
-								"153,157": "Initializing field by default value is redundant",
-								"193,201": "Name should have prefix '_'. (Rule 'Fields').",
-								"26,31": "Using directive is not used by code and can be removed safely.",
-								"435,441": "Method 'Update' has the same with 'Start'",
-								"488,491": "Parameter can be IComparable"
+								"296,297": "Initializing field by default value is redundant"
 							},
-							"syntax": "Packages/C#/C#.sublime-syntax"
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
