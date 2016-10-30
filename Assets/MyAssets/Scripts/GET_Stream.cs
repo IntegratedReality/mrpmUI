@@ -24,6 +24,8 @@ public class GET_Stream : MonoBehaviour {
         url = "http://" + PlayerPrefs.GetString("rasPiAddress") + ":8080/?action=snapshot";
         Debug.Log("Connect to " + url);
         rawImage = GetComponent<RawImage>();
+
+        SetWindow();
     }
 
     void Update() {
@@ -31,5 +33,9 @@ public class GET_Stream : MonoBehaviour {
             StartCoroutine (GetTexture ());
             nextGet = Time.time + GetRate;
         }
+    }
+
+    void SetWindow(){
+
     }
 }

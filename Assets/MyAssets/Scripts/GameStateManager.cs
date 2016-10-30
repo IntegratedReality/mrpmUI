@@ -1,8 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Net;
+
+namespace MRPM
+{
 
 public  class GameStateManager : MonoBehaviour {
 
@@ -34,8 +36,6 @@ public  class GameStateManager : MonoBehaviour {
 
 	public void SetRasPiAddress(string arg){
 		PlayerPrefs.SetString(raspiAddressString, arg);
-		var tmp = PlayerPrefs.GetString(raspiAddressString);
-		Debug.Log("IPAddress Updated, " + tmp);
 	}
 
 	public void LoadMainLevel(){
@@ -49,4 +49,6 @@ public  class GameStateManager : MonoBehaviour {
 		}
 		SceneManager.LoadScene("Main");
 	}
+}
+
 }
