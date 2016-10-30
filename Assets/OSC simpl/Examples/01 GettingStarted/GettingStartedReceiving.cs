@@ -55,7 +55,7 @@ namespace OscSimpl.Examples
 
 			// 1) For messages with one argument, simply provide the address and
 			// a method with one argument. In this case, OnTest1 takes a float argument.
-			UnityAction<float> OnTest1Event;;
+			UnityAction<float> OnTest1Event;
 			OnTest1Event = OnTest1;
 			oscIn.Map( "/test1", OnTest1Event);
 

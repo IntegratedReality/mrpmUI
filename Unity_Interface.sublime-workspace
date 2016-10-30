@@ -4,6 +4,62 @@
 		"selected_items":
 		[
 			[
+				"MRPM_",
+				"MRPM_PlayerAuthorization\tMRPM_PlayerAuthorization"
+			],
+			[
+				"Autho",
+				"MRPM_PlayerAuthorization()\tMRPM_PlayerAuthorization()"
+			],
+			[
+				"M",
+				"MRPM\tMRPM"
+			],
+			[
+				"A",
+				"Add(string value)\tvoid"
+			],
+			[
+				"add",
+				"Add(string value)\tvoid"
+			],
+			[
+				"robo",
+				"robotIPAddress\tstring"
+			],
+			[
+				"Tr",
+				"TryGet(int index, out string value)\tbool"
+			],
+			[
+				"tryge",
+				"TryGet(int index, out float value)\tbool"
+			],
+			[
+				"te",
+				"Text\tText"
+			],
+			[
+				"Unity",
+				"UnityAction<\tUnityAction<"
+			],
+			[
+				"Uni",
+				"UnityAction<\tUnityAction<"
+			],
+			[
+				"UnityE",
+				"UnityEngine\tUnityEngine"
+			],
+			[
+				"osc",
+				"oscIn\tOscIn"
+			],
+			[
+				"Os",
+				"OscIn\tOscIn"
+			],
+			[
 				"is",
 				"isMine\tbool { get; set; }"
 			],
@@ -14,10 +70,6 @@
 			[
 				"set",
 				"SetNativeSize()\tvoid"
-			],
-			[
-				"te",
-				"textureNonReadable\tTexture2D { get; }"
 			],
 			[
 				"Get",
@@ -70,14 +122,6 @@
 			[
 				"OnCa",
 				"OnCachedReceived_Event\tUnityEvent<float>"
-			],
-			[
-				"UnityE",
-				"UnityEvent()\tUnityEvent"
-			],
-			[
-				"Unity",
-				"UnityEvent<\tUnityEvent<"
 			],
 			[
 				"O",
@@ -134,10 +178,6 @@
 			[
 				"Chi",
 				"Child(string name)\tGameObject"
-			],
-			[
-				"Uni",
-				"Unity\tUnity"
 			],
 			[
 				"SteamVR_Tra",
@@ -392,10 +432,6 @@
 				"MeshCollider\tMeshCollider"
 			],
 			[
-				"add",
-				"AddForce(float x, float y, float z, ForceMode mode)\tvoid"
-			],
-			[
 				"ob",
 				"GameObject\tGameObject"
 			],
@@ -478,94 +514,18 @@
 			[
 				"IPA",
 				"IPAddress\tIPAddress"
-			],
-			[
-				"ke",
-				"KeyValuePair<\tKeyValuePair<"
-			],
-			[
-				"In",
-				"InputField\tInputField"
-			],
-			[
-				"r",
-				"TryParse(string s, out double result)\tbool"
-			],
-			[
-				"Encod",
-				"Encoding\tEncoding"
-			],
-			[
-				"getby",
-				"GetBytes(string s)\tbyte[]"
-			],
-			[
-				"IPEndPoin",
-				"IPEndPoint(IPAddress address, int port)\tIPEndPoint(IPAddress address, int port)"
-			],
-			[
-				"Udp",
-				"UdpState(IPEndPoint ep, byte[] udpData)\tUdpState(IPEndPoint ep, byte[] udpData)"
-			],
-			[
-				"UdpS",
-				"UdpState\tUdpState"
-			],
-			[
-				"co",
-				"Connect(IPEndPoint endPoint)\tvoid"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "Unity_Interface.sublime-project",
+			"file": "Assets/MyAssets/Scripts/MRPM_PlayerAuthorization.cs",
 			"settings":
 			{
-				"buffer_size": 286,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/MyAssets/Scripts/GameStateManager.cs",
-			"settings":
-			{
-				"buffer_size": 912,
+				"buffer_size": 860,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\nnamespace MRPM\n{\n\t\n\npublic class MRPM_OSCHandler : MonoBehaviour {\n\n\t// Use this for initialization\n\tvoid Start () {\n\n\t}\n\n\t// Update is called once per frame\n\tvoid Update () {\n\n\t}\n}\n\n}",
-			"file": "Assets/MRPM_OSCHandler.cs",
-			"file_size": 245,
-			"file_write_time": 131222982350000000,
-			"settings":
-			{
-				"buffer_size": 264,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/MyAssets/Test/Editor/OSCTest.cs",
-			"settings":
-			{
-				"buffer_size": 317,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Package Control Messages\n========================\n\nLaTeXTools\n----------\n\n  LaTeXTools Plugin version 3.12.0 (2016-10-30) changelog:\n  \n  Features:\n  - Live-preview math equations while writing them (only applies to versions >= 3118)\n  - Hover over included graphics to show them in a popup (only applies to versions >= 3118)\n  - LaTeX build variants (`C-shift-b`) now supports alternative and more flexible builders\n  - Jump to label usages are added to jump-to-anywhere\n  - Added a command to search for LaTeX-commands in the whole document \n  - Added support for the glossary package\n  - Improvements in CWL completions for environments\n  \n  Bugfixes:\n  - Fixed a bug, which disabled fill-all helper for indented lines (#866)\n",
-			"settings":
-			{
-				"buffer_size": 729,
-				"line_ending": "Unix",
-				"name": "Package Control Messages",
-				"read_only": true,
-				"scratch": true
 			}
 		}
 	],
@@ -915,24 +875,30 @@
 	[
 		"/Users/takumiito/MyGit/Unity_Interface",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets",
-		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets"
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Test",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Test/Editor"
 	],
 	"file_history":
 	[
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Test/Editor/OSCTest.cs",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/OSC simpl/Examples/01 GettingStarted/GettingStartedReceiving.cs",
+		"/Users/takumiito/MyGit/Unity_Interface/Unity_Interface.sublime-project",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/GameStateManager.cs",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/MRPM_OSCHandler.cs",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/GET_Stream.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/MRPM_OSCHandler.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/MRPM_PlayerController.cs",
-		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/GET_Stream.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/MRPMPlayerController.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/RasPiAddressInputScript.cs",
 		"/Users/takumiito/.ssh/known_hosts",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/RasPiAddressInputScript.cs",
-		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/GameStateManager.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/PlayerPrefs.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/ParamStorage.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/Get_Stream.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/UniWeb/Examples/UniWebExamples.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/OSC simpl/Examples/09 Optimisations/Optimisations.cs",
-		"/Users/takumiito/MyGit/Unity_Interface/Assets/OSC simpl/Examples/01 GettingStarted/GettingStartedReceiving.cs",
 		"/Users/takumiito/MyGit/AsiaHaptics/AsiaHaptics.sublime-project",
 		"/Users/takumiito/Google ドライブ/LectureNote/2016A/image_processing/image_processing_keyword.txt",
 		"/Users/takumiito/MyGit/Kototama_Unity/kototama/Assets/myAssets/Script/VoiceController.cs",
@@ -1014,6 +980,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"robotID",
+			"authDataText",
+			"robotIPAddress",
+			"authDataText",
+			"robotIPAddress",
+			"robotID",
+			"isAuthorized",
 			"FLAGS.summaries_dir",
 			"GvrAudioSource ",
 			"AudioSource",
@@ -1078,24 +1051,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Unity_Interface.sublime-project",
+					"file": "Assets/MyAssets/Scripts/MRPM_PlayerAuthorization.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 286,
+						"buffer_size": 860,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								283,
-								283
+								483,
+								483
 							]
 						],
 						"settings":
@@ -1107,8 +1080,8 @@
 								{
 									"1":
 									[
-										282,
-										283
+										483,
+										484
 									]
 								},
 								"icon":
@@ -1123,8 +1096,8 @@
 								{
 									"1":
 									[
-										262,
-										263
+										481,
+										482
 									]
 								},
 								"unmatched":
@@ -1133,458 +1106,74 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content"
-							],
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Assets/MyAssets/Scripts/GameStateManager.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 912,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								131,
-								131
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
 							],
-							"is_init_dirty_state": false,
+							"is_init_dirty_state": true,
 							"oops":
 							{
-								"0,5": "Using directive is not used by code and can be removed safely.",
-								"191,209": "Convert to readonly",
-								"26,31": "Using directive is not used by code and can be removed safely.",
-								"262,270": "Name should have prefix '_'. (Rule 'Fields').",
-								"505,511": "Method 'Update' has the same with 'Start'"
+								"0,5": "Using directive is not used by code and can be removed safely."
 							},
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/C#/C#.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Assets/MRPM_OSCHandler.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 264,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								98,
-								98
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										263,
-										264
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
-										"brackethighlighter.default"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										95,
-										96
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content"
-							],
-							"is_init_dirty_state": true,
-							"syntax": "Packages/C#/C#.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Assets/MyAssets/Test/Editor/OSCTest.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 317,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								242,
-								242
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										313,
-										314
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
-										"brackethighlighter.default"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										143,
-										144
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"is_init_dirty_state": false,
-							"oops":
-							{
-								"0,5": "Using directive is not used by code and can be removed safely.",
-								"19,24": "Using directive is not used by code and can be removed safely.",
-								"201,204": "Assignment is redundant",
-								"61,66": "Using directive is not used by code and can be removed safely."
-							},
-							"syntax": "Packages/C#/C#.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 729,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								729,
-								729
-							]
-						],
-						"settings":
-						{
-							"auto_indent": false,
-							"bracket_highlighter.busy": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_width": 2,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]
