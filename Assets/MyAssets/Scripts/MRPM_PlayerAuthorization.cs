@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
-namespace MRPM{
+namespace MRPM
+{
 
 [RequireComponent (typeof(OscIn), typeof(OscOut))]
 public class MRPM_PlayerAuthorization : MonoBehaviour {
@@ -18,8 +20,9 @@ public class MRPM_PlayerAuthorization : MonoBehaviour {
 	int robotID;
 	[SerializeField]
 	string rasPiHostName;
-	[SerializeField]
-	bool isAuthorized;
+
+	public MRPM_GeneralManager _generalMagnager;
+	public StartGameButtonScript _startButton;
 
 	// Use this for initialization
 	void Start () {
@@ -29,7 +32,8 @@ public class MRPM_PlayerAuthorization : MonoBehaviour {
 		oscIn.Map("/main/toCtrlr/assign", ReceiveAuthData);
 	}
 
-	void OnClick(){
+	public void OnClick(){
+		Debug.Log("AuthButtonClick");
 		if (!oscIn.isOpen){
 			oscIn.Open(port_MAINRCV, null);
 		}
@@ -53,10 +57,10 @@ public class MRPM_PlayerAuthorization : MonoBehaviour {
 	void OnAuthorized(){
 		oscIn.Close();
 		oscOut.Open(port_MAINRCV, mainServerAddress);
-		isAuthorized = true;
-		oscOut.Send("/operator/ack", robotID);
+		_generalMagnager.myRobotID = robotID;
+		_generalMagnager.myRasPiHostName = rasPiHostName;
 		_authDataText.text = "robotID: " + robotID + " HostName: " + rasPiHostName;
-		oscOut.Close();
+		_startButton.OnAuthorized();
 	}
 }
 

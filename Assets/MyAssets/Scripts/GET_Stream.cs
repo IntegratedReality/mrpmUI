@@ -5,7 +5,7 @@ using MRPM;
 
 public class GET_Stream : MonoBehaviour {
 
-	public MRPM_GameStateManager _gameStateManager;
+	public MRPM_GeneralManager _generalManager;
 	public bool IsStreamingEnabled {get; set;}
 	private string url;
 	[SerializeField]
@@ -28,7 +28,7 @@ public class GET_Stream : MonoBehaviour {
 
 	void Start() {
 		//url = "http://" + PlayerPrefs.GetString("rasPiAddress") + ":8080/?action=snapshot";
-		url = "http://" + _gameStateManager.RasPiAddress + "8080/?action=snapshot";
+		url = "http://" + _generalManager.myRasPiHostName + "8080/?action=snapshot";
 		Debug.Log("Connect to " + url);
 		rawImage = GetComponent<RawImage>();
 	}

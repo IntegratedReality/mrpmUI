@@ -11,22 +11,32 @@ public class MRPM_Player : MonoBehaviour {
 	[TooltipAttribute ("True if this is the player object this UI attached to")]
 	bool isMine;
 	[SerializeField]
-	[TooltipAttribute ("the IPAddress of Raspbery Pi")]
-	string piAddress;
+	[TooltipAttribute ("Robot ID")]
+	string robotID;
 
 	[HeaderAttribute ("Status List")]
-	[SerializeField] float stamina;
-	[SerializeField] float life;
-	Vector3 position;
-	Vector3 rotation;
+	[SerializeField] float energy;
+	[SerializeField] float hp;
+	[SerializeField] int isDead;
 
 	// Use this for initialization
 	void Start () {
-
 	}
 
 	// Update is called once per frame
 	void Update () {
+
+	}
+
+	public void Fire() {
+
+	}
+
+	public void DamagedEffect(){
+
+	}
+
+	public void EffectDead(){
 
 	}
 }
