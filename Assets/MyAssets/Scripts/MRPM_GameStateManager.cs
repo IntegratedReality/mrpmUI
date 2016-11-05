@@ -1,16 +1,18 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Net;
 
 namespace MRPM
 {
 
-public  class GameStateManager : MonoBehaviour {
+public  class MRPM_GameStateManager : MonoBehaviour {
 
-	string raspiAddressString = "rasPiAddress";
+	[SerializeField]
+	public string RasPiAddress{get; set;}
+	[SerializeField]
+	public bool IsPlayerAuthorized{get; set;}
 
-	static  public GameStateManager instance;
+	static  public MRPM_GameStateManager instance;
 	void Awake(){
 		if (instance == null){
 			instance = this;
@@ -35,19 +37,11 @@ public  class GameStateManager : MonoBehaviour {
 	}
 
 	public void SetRasPiAddress(string arg){
-		PlayerPrefs.SetString(raspiAddressString, arg);
+		RasPiAddress = arg;
 	}
 
 	public void LoadMainLevel(){
-		var address = PlayerPrefs.GetString(raspiAddressString);
-		try {
-			IPAddress.Parse(address);
-		}catch(System.Exception e){
-			Debug.Log(e);
-			//ポップアップ表示
-			return;
-		}
-		SceneManager.LoadScene("Main");
+		SceneManager.LoadScene("Main", LoadSceneMode.Single);
 	}
 }
 

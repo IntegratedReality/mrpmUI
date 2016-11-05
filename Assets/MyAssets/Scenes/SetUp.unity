@@ -330,12 +330,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 386303382}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &693624482
 GameObject:
@@ -444,12 +444,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 802133225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &874849116
 GameObject:
@@ -575,6 +575,7 @@ GameObject:
   - component: {fileID: 1018773451}
   - component: {fileID: 1018773450}
   - component: {fileID: 1018773449}
+  - component: {fileID: 1018773454}
   m_Layer: 5
   m_Name: PlayerAuthButon
   m_TagString: Untagged
@@ -619,72 +620,7 @@ MonoBehaviour:
   _addTimeTagsToBundledMessages: 0
   _openOnAwake: 0
   _dirtyMappings: 0
-  _mappings:
-  - address: /main
-    type: 0
-    OscMessageHandler:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: OscSimpl.OscMessageEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    FloatHandler:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: OscSimpl.OscFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    DoubleHandler:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: OscSimpl.OscDoubleEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    IntHandler:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: OscSimpl.OscIntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    LongHandler:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: OscSimpl.OscLongEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    StringHandler:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: OscSimpl.OscStringEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    CharHandler:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: OscSimpl.OscCharEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    BoolHandler:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: OscSimpl.OscBoolEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    ColorHandler:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: OscSimpl.OscColorEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    BlobHandler:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: OscSimpl.OscBlobEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    TimeTagHandler:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: OscSimpl.OscTimeTagEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    ImpulseNullEmptyHandler:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    runtimeMethodLabels: []
-    editorMethodCount: 0
-    foldoutHandlers: 1
+  _mappings: []
   _settingsFoldout: 1
   _mappingsFoldout: 1
   _messagesFoldout: 0
@@ -699,9 +635,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e83e839f9ebd4dfa8a03a3a1ace72af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _authDataText: {fileID: 0}
-  robotID: 
-  robotIPAddress: 
+  _authDataText: {fileID: 693624484}
+  port_MAINRCV: 8001
+  mainServerAddress: 192.168.1.10
+  robotID: 0
+  rasPiHostName: 
+  isAuthorized: 0
 --- !u!114 &1018773451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -776,6 +715,31 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1018773447}
+--- !u!114 &1018773454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1018773447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a83e4d41d3144efb843adad75b278d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _port: 8000
+  _mode: 1
+  _ipAddress: 192.168.1.1
+  _remoteStatus: 2
+  onAnyMessage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OscSimpl.OscMessageEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  _multicastLoopback: 1
+  _bundleMessagesOnEndOfFrame: 0
+  _openOnAwake: 0
+  _settingsFoldout: 1
+  _messagesFoldout: 0
 --- !u!1 &1365647085
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +751,7 @@ GameObject:
   - component: {fileID: 1365647089}
   - component: {fileID: 1365647088}
   - component: {fileID: 1365647087}
+  - component: {fileID: 1365647090}
   m_Layer: 5
   m_Name: StartGameButton
   m_TagString: Untagged
@@ -898,6 +863,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1365647085}
+--- !u!114 &1365647090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1365647085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e012981d2e9474df597f7207c1e28730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1800751264
 GameObject:
   m_ObjectHideFlags: 0

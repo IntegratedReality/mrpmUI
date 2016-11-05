@@ -17,6 +17,8 @@ public class MRPM_Player : MonoBehaviour {
 	[HeaderAttribute ("Status List")]
 	[SerializeField] float stamina;
 	[SerializeField] float life;
+	Vector3 position;
+	Vector3 rotation;
 
 	// Use this for initialization
 	void Start () {
@@ -25,9 +27,7 @@ public class MRPM_Player : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (isMine){
 
-		}
 	}
 }
 
