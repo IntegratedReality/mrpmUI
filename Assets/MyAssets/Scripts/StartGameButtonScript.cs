@@ -27,8 +27,8 @@ public class StartGameButtonScript : MonoBehaviour {
     }
 
     public void SendACK(){
-        int myRobotID = _generalManager.myRobotID;
-        if (myRobotID!=0){
+        string myRobotID = _generalManager.myRobotID;
+        if (myRobotID!=null){
             Debug.Log("Send ACK");
             oscOut.Send("/operator/ack", myRobotID);
         }

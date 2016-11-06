@@ -28,7 +28,7 @@ public class GET_Stream : MonoBehaviour {
 
 	void Start() {
 		//url = "http://" + PlayerPrefs.GetString("rasPiAddress") + ":8080/?action=snapshot";
-		url = "http://" + _generalManager.myRasPiHostName + "8080/?action=snapshot";
+		url = "http://" + _generalManager.myRobotHostName + "8080/?action=snapshot";
 		Debug.Log("Connect to " + url);
 		rawImage = GetComponent<RawImage>();
 	}

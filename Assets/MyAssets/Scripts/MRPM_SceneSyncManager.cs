@@ -1,28 +1,38 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using OscSimpl;
+using UniRx;
 
 namespace MRPM
 {
 
-[RequireComponent(typeof(OscIn), typeof(OscOut))]
+[RequireComponent(typeof(OscIn))]
 public class MRPM_SceneSyncManager : MonoBehaviour {
 
     OscIn oscIn;
-    OscOut oscOut;
-    Dictionary<string, string> SceneVariables;
+    public ReactiveDictionary<string, string> SceneVariables{get; private set;}
+    MRPM_GeneralManager gm;
+
+    static public MRPM_SceneSyncManager _instance;
+    void Awake(){
+        if (_instance == null){
+            _instance = this;
+        } else {
+            Destroy(gameObject);
+        }
+    }
 
 	// Use this for initialization
 	void Start () {
+        gm = MRPM_GeneralManager._instance;
         oscIn = GetComponent<OscIn>();
-        oscOut = GetComponent<OscOut>();
-		oscIn.Open(8001, null);
-        SceneVariables = new Dictionary<string, string>();
+		oscIn.Open(gm.PORT_OPERATOR, null);
+        oscIn.Map(gm.ADDRESS_SYNC, ParseOscMessage);
+        SceneVariables = new ReactiveDictionary<string, string>();
 	}
 
     void OnEnabled()
     {
-        oscIn.Map("/main/toCtrlr/sync", ParseOscMessage);
+        oscIn.Map(gm.ADDRESS_SYNC, ParseOscMessage);
     }
 
     void OnDisabled()
@@ -43,17 +53,15 @@ public class MRPM_SceneSyncManager : MonoBehaviour {
         }
         int kvCount = oscMessage.args.Count/2;
         for (int i = 0; i < kvCount; i++){
-            string tmp1, tmp2;
-            if (oscMessage.TryGet(i, out tmp1) && oscMessage.TryGet(i+1, out tmp2))
+            string objectID, syncValue;
+            if (oscMessage.TryGet(i, out objectID) && oscMessage.TryGet(i+1, out syncValue))
             {
-                SceneVariables.Add(tmp1, tmp2);
+                SceneVariables.Add(objectID, syncValue);
             } else {
                 Debug.LogWarning("Error Getting Data from OscMessage");
             }
         }
     }
-
-    
 }
 
 }
