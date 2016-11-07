@@ -15,6 +15,7 @@ public class MRPM_GeneralManager : MonoBehaviour {
 	public int PORT_MAINRCV = 8000;
 	public string ADDRESS_TO_ROBOT = "/operator/operation";
 	public string ADDRESS_TO_Main_SHOOT =  "/operator/shot";
+	public string ADDRESS_ACK = "/operator/ack";
 	public string ADDRESS_SYNC = "/main/toCtrlr/sync";
 
 	public OscIn _oscIn;

@@ -4,33 +4,40 @@ using UnityEngine.UI;
 using MRPM;
 
 [RequireComponent(typeof(OscOut))]
-public class StartGameButtonScript : MonoBehaviour {
+public class StartGameButtonScript : MonoBehaviour
+{
 
-    public MRPM_GeneralManager _generalManager;
+    MRPM_GeneralManager _generalManager;
     Button startButton;
     OscOut oscOut;
 
-	// Use this for initialization
-	void Start () {
-		startButton = GetComponent<Button>();
+    // Use this for initialization
+    void Start()
+    {
+        _generalManager = MRPM_GeneralManager._instance;
+        startButton = GetComponent<Button>();
         startButton.interactable = false;
         oscOut = GetComponent<OscOut>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    }
+    
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 
-    public void OnAuthorized(){
+    public void OnAuthorized()
+    {
         startButton.interactable = true;
     }
 
-    public void SendACK(){
+    public void SendACK()
+    {
         string myRobotID = _generalManager.myRobotID;
-        if (myRobotID!=null){
+        if (myRobotID != null)
+        {
             Debug.Log("Send ACK");
-            oscOut.Send("/operator/ack", myRobotID);
+            oscOut.Send(_generalManager.ADDRESS_ACK, myRobotID);
         }
     }
 }

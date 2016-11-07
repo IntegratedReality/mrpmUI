@@ -76,18 +76,27 @@ namespace MRPM
 
         int RobotControlOrder()
         {
-            int h = (int)Input.GetAxis("Horizontal");
-            int v = (int)Input.GetAxis("Vertical");
-            switch (3 * h + v)
-            {
-                default:
-                    return 0;
-                case 0:
-                    return 0;
-                case 1:
-                    return 1;
-            }
+            int h = (int)Input.GetAxis("Horizontal") + 1;
+            int v = (int)Input.GetAxis("Vertical") + 1;
+            int op = h + v*3;
+            return directionConvertArray[op];
         }
+
+        int[] directionConvertArray = {6, 5, 4, 7, 0, 3, 8, 1, 2};
+
+        /*
+        enum EDirection {
+    NO_INPUT,
+    TOP,
+    TOP_RIGHT,
+    RIGHT,
+    BOTTOM_RIGHT,
+    BOTTOM,
+    BOTTOM_LEFT,
+    LEFT,
+    TOP_LEFT
+};
+        */
 
         bool isFire()
         {
