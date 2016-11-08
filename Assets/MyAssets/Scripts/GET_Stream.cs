@@ -7,7 +7,7 @@ public class GET_Stream : MonoBehaviour {
 
 	public MRPM_GeneralManager _generalManager;
 	public bool IsStreamingEnabled {get; set;}
-	private string url;
+	public string url;
 	[SerializeField]
 	const float GetRate = 0.15f;
 	private float nextGet ;
@@ -27,10 +27,11 @@ public class GET_Stream : MonoBehaviour {
 	}
 
 	void Start() {
-		//url = "http://" + PlayerPrefs.GetString("rasPiAddress") + ":8080/?action=snapshot";
-		url = "http://" + _generalManager.myRobotHostName + "8080/?action=snapshot";
+		url = "http://" + _generalManager.myRobotHostName + ":8080/?action=snapshot";
+		//url ="http://mrpmpi2.local:8080/?action=snapshot";
 		Debug.Log("Connect to " + url);
 		rawImage = GetComponent<RawImage>();
+		IsStreamingEnabled = true;
 	}
 
 	void Update() {

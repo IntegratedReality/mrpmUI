@@ -4,92 +4,72 @@
 		"selected_items":
 		[
 			[
-				"GetKe",
-				"GetKey(KeyCode key)\tbool"
+				"ro",
+				"rotation\tQuaternion { get; set; }"
 			],
 			[
-				"A",
-				"ADDRESS_TO_Main_SHOOT\tstring"
+				"v",
+				"maxValue\tfloat { get; set; }"
 			],
 			[
-				"de",
-				"default\tdefault"
-			],
-			[
-				"MRPM",
-				"MRPM_GeneralManager\tMRPM_GeneralManager"
-			],
-			[
-				"MR",
-				"MRPM_GeneralManager\tMRPM_GeneralManager"
-			],
-			[
-				"po",
-				"PORT_ROBOT\tint"
-			],
-			[
-				"Sed",
-				"Send(string address, params object[] args)\tbool"
-			],
-			[
-				"oscOU",
-				"oscOut\tOscOut"
+				"UNi",
+				"UnityEngine\tUnityEngine"
 			],
 			[
 				"MRP",
-				"MRPM_GeneralManager\tMRPM_GeneralManager"
+				"MRPM_Player\tMRPM_Player"
 			],
 			[
-				"Try",
-				"TryGet(int index, out float value)\tbool"
+				"Getcom",
+				"GetComponent<T>()\tT"
 			],
 			[
-				"tryG",
-				"TryGet(int index, out float value)\tbool"
+				"Insta",
+				"Instantiate(MRPM_Player prefab, string robotID, bool isMine, Vector3 position, Quaternion rotation, Transform parent)\tMRPM_Player"
 			],
 			[
-				"Osc",
-				"OscSimpl\tOscSimpl"
+				"MRPM",
+				"MRPM_Player\tMRPM_Player"
 			],
 			[
-				"tmp",
-				"tmp2\tstring"
+				"hi",
+				"HitPoint\tReactiveProperty<float>"
 			],
 			[
-				"key",
-				"keySplit\tstring[]"
+				"h",
+				"HitPoint\tReactiveProperty<float>"
 			],
 			[
-				"ke",
-				"keySplit\tstring[]"
-			],
-			[
-				"st",
-				"string\tstring"
-			],
-			[
-				"Sce",
-				"SceneVariables\tDictionary<string, string>"
-			],
-			[
-				"_",
-				"_startButton\tStartGameButtonScript"
-			],
-			[
-				"g",
-				"guiText\tComponent { get; }"
-			],
-			[
-				"getA",
-				"GetAxis(string axisName)\tfloat"
-			],
-			[
-				"a",
-				"args\tList<object> { get; set; }"
+				"O",
+				"OscOut\tOscOut"
 			],
 			[
 				"osc",
-				"oscMessage\tOscMessage"
+				"oscOut\tOscOut"
+			],
+			[
+				"Vec",
+				"Vector3\tVector3"
+			],
+			[
+				"Osc",
+				"OscOut\tOscOut"
+			],
+			[
+				"Send",
+				"Send(string address, params object[] args)\tbool"
+			],
+			[
+				"Se",
+				"SendMessage(string methodName, object value, SendMessageOptions options)\tvoid"
+			],
+			[
+				"Sy",
+				"SyncPort\tint"
+			],
+			[
+				"ca",
+				"catch\tcatch"
 			],
 			[
 				"MRPM_",
@@ -102,6 +82,10 @@
 			[
 				"M",
 				"MRPM\tMRPM"
+			],
+			[
+				"A",
+				"Add(string value)\tvoid"
 			],
 			[
 				"add",
@@ -204,10 +188,6 @@
 				"OnCachedReceived_Event\tUnityEvent<float>"
 			],
 			[
-				"O",
-				"Object()\tObject"
-			],
-			[
 				"getMeth",
 				"GetMethod(string name)\tMethodInfo"
 			],
@@ -288,12 +268,12 @@
 				"Rigidbody\tRigidbody"
 			],
 			[
-				"Vec",
-				"Vector3(float x, float y, float z)\tVector3(float x, float y, float z)"
-			],
-			[
 				"Instanti",
 				"Instantiate(Object original, Vector3 position, Quaternion rotation, Transform parent)\tObject"
+			],
+			[
+				"_",
+				"_voiceObjectPrefab\tGameObject"
 			],
 			[
 				"su",
@@ -378,6 +358,10 @@
 			[
 				"getcomponents",
 				"GetComponentsInChildren<T>()\tT[]"
+			],
+			[
+				"po",
+				"position\tVector3 { get; set; }"
 			],
 			[
 				"instan",
@@ -514,25 +498,68 @@
 			[
 				"u",
 				"tty.usbmodem1411"
+			],
+			[
+				"tty",
+				"tty.usbmodem1411"
+			],
+			[
+				"if",
+				"ifelse\tGNUOct func"
+			],
+			[
+				"prin",
+				"printf\tGNUOct func"
+			],
+			[
+				"divise",
+				"divisionLeftX"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "Assets/MyAssets/Scripts/MRPM_ControllerManager.cs",
+			"file": "Assets/MyAssets/Scripts/StartGameButtonScript.cs",
 			"settings":
 			{
-				"buffer_size": 1268,
+				"buffer_size": 926,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Assets/MyAssets/Scripts/MRPM_FireManager.cs",
+			"file": "Assets/MyAssets/Scripts/MRPM_ControllerManager.cs",
 			"settings":
 			{
-				"buffer_size": 942,
+				"buffer_size": 2533,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/MyAssets/Scripts/MRPM_Player.cs",
+			"settings":
+			{
+				"buffer_size": 2716,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/MyAssets/Scripts/MRPM_SceneSyncManager.cs",
+			"settings":
+			{
+				"buffer_size": 4683,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/MyAssets/Scripts/MRPM_HUDController.cs",
+			"settings":
+			{
+				"buffer_size": 989,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
@@ -541,19 +568,7 @@
 			"file": "Assets/MyAssets/Scripts/MRPM_PlayerAuthorization.cs",
 			"settings":
 			{
-				"buffer_size": 1484,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "using System.Collections.Generic;\nusing UnityEngine;\nusing UnityEngine.SceneManagement;\n\nnamespace MRPM\n{\npublic class MRPM_GeneralManager : MonoBehaviour {\n\n\tpublic string myRasPiHostName;\n\tpublic int myRobotID;\n\n\tpublic int PORT_ROBOT = 8000;\n\tpublic int PORT_OPERATOR = 8001;\n\tpublic int PORT_MAINRCV = 8000;\n\tpublic string ADDRESS_TO_ROBOT = \"/operator/operation\";\n\tpublic string ADDRESS_TO_Main_SHOOT =  \"/operator/shot\";\n\n\tOscIn oscIn;\n\tOscOut oscOut;\n\n\tstatic public MRPM_GeneralManager instance;\n\tvoid Awake(){\n\t\tif (instance == null){\n\t\t\tinstance = this;\n\t\t\tDontDestroyOnLoad(gameObject);\n\t\t} else {\n\t\t\tDestroy(gameObject);\n\t\t}\n\t}\n\n\t// Use this for initialization\n\tvoid Start () {\n\t}\n\n\t// Update is called once per frame\n\tvoid Update () {\n\n\t}\n\n\tpublic void LoadMainLevel(){\n\t\tSceneManager.LoadScene(\"Main\", LoadSceneMode.Single);\n\t}\n}\n\n}\n",
-			"file": "Assets/MyAssets/Scripts/MRPM_GeneralManager.cs",
-			"file_size": 850,
-			"file_write_time": 131228496160000000,
-			"settings":
-			{
-				"buffer_size": 847,
+				"buffer_size": 2426,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
@@ -599,16 +614,12 @@
 	"command_palette":
 	{
 		"height": 354.0,
-		"last_filter": "insta",
+		"last_filter": "pre",
 		"selected_items":
 		[
 			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
-				"remo",
-				"Package Control: Remove Package"
+				"pre",
+				"Preferences: Settings"
 			],
 			[
 				"pac",
@@ -693,6 +704,14 @@
 			[
 				"reload",
 				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
 			],
 			[
 				"pack",
@@ -883,7 +902,7 @@
 				"About"
 			]
 		],
-		"width": 467.0
+		"width": 456.0
 	},
 	"console":
 	{
@@ -903,34 +922,27 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/takumiito/GitHub/Unity_Interface",
-		"/Users/takumiito/GitHub/Unity_Interface/Assets",
-		"/Users/takumiito/GitHub/Unity_Interface/Assets/MyAssets",
-		"/Users/takumiito/GitHub/Unity_Interface/Assets/MyAssets/Scripts",
-		"/Users/takumiito/GitHub/Unity_Interface/Assets/OSC simpl",
-		"/Users/takumiito/GitHub/Unity_Interface/Assets/OSC simpl/Documents"
+		"/Users/takumiito/MyGit/Unity_Interface",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Test",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Test/Editor"
 	],
 	"file_history":
 	[
-		"/Users/takumiito/GitHub/Unity_Interface/Assets/MyAssets/Scripts/MRPM_SyncedObject.cs",
-		"/Users/takumiito/GitHub/Unity_Interface/Assets/MyAssets/Scripts/MRPM_SceneSyncManager.cs",
-		"/Users/takumiito/GitHub/Unity_Interface/Assets/MyAssets/Scripts/MRPM_Player.cs",
-		"/Users/takumiito/GitHub/Unity_Interface/Assets/MyAssets/Scripts/StartGameButtonScript.cs",
-		"/Users/takumiito/GitHub/Unity_Interface/Assets/MyAssets/Scripts/MRPM_GeneralManager.cs",
-		"/Users/takumiito/GitHub/Unity_Interface/Assets/MyAssets/Scripts/MRPM_PlayerAuthorization.cs",
-		"/Users/takumiito/GitHub/Unity_Interface/Assets/MyAssets/Scripts/MRPM_ControllerManager.cs",
-		"/Users/takumiito/GitHub/Unity_Interface/Assets/MyAssets/Scripts/GET_Stream.cs",
-		"/Users/takumiito/GitHub/Unity_Interface/Assets/MyAssets/Scripts/MRPM_GameStateManager.cs",
-		"/Users/takumiito/GitHub/Unity_Interface/Assets/MyAssets/Scripts/MRPM_GameSyncManager.cs",
-		"/Users/takumiito/GitHub/Unity_Interface/Unity_Interface.sublime-project",
-		"/Users/takumiito/GitHub/Unity_Interface/.travis.yml",
-		"/Users/takumiito/GitHub/mrpmUI/Assets/MyAssets/Scripts/MRPM_Player.cs",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MRPM_HUDController.cs",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/MRPM_MainSceneManager.cs",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/MRPM_GameStateManager.cs",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/GameStateManager.cs",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/MRPM_Player.cs",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/MRPM_SyncedObject.cs",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/MRPM_PlayerAuthorization.cs",
+		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/GET_Stream.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Test/Editor/OSCTest.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/OSC simpl/Examples/01 GettingStarted/GettingStartedReceiving.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Unity_Interface.sublime-project",
-		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/GameStateManager.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/MRPM_OSCHandler.cs",
-		"/Users/takumiito/MyGit/Unity_Interface/Assets/MyAssets/Scripts/GET_Stream.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/MRPM_OSCHandler.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/MRPM_PlayerController.cs",
 		"/Users/takumiito/MyGit/Unity_Interface/Assets/MRPMPlayerController.cs",
@@ -1023,8 +1035,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"[SerializeField]",
-			"RasPiAddress",
+			"velocity",
+			"PORT_MAINRCV",
+			"MAIN_ADDRESS",
+			"PORT_OPERATOR",
+			"_authorizationPort",
+			"_authorizationPort ",
+			"rasPiAddress",
+			"isPlayerAuthorized",
+			"rasPiAddress",
+			"authorizationPort",
+			"8001",
+			"robotIPAddress",
 			"robotID",
 			"authDataText",
 			"robotIPAddress",
@@ -1096,62 +1118,236 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Assets/MyAssets/Scripts/MRPM_ControllerManager.cs",
+					"file": "Assets/MyAssets/Scripts/StartGameButtonScript.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1268,
+						"buffer_size": 926,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1003,
-								1003
+								339,
+								339
 							]
 						],
 						"settings":
 						{
-							"oops":
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
 							{
-								"0,5": "Using directive is not used by code and can be removed safely.",
-								"26,31": "Using directive is not used by code and can be removed safely.",
-								"292,300": "Name should have prefix '_'. (Rule 'Fields')."
+								"close":
+								{
+									"1":
+									[
+										510,
+										511
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										318,
+										319
+									]
+								},
+								"unmatched":
+								{
+								}
 							},
+							"bracket_highlighter.regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"is_init_dirty_state": false,
 							"syntax": "Packages/C#/C#.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 296.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "Assets/MyAssets/Scripts/MRPM_FireManager.cs",
+					"file": "Assets/MyAssets/Scripts/MRPM_ControllerManager.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 942,
+						"buffer_size": 2533,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								910,
-								910
+								508,
+								508
 							]
 						],
 						"settings":
 						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										558,
+										559
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										507,
+										508
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"is_init_dirty_state": false,
 							"oops":
 							{
 								"0,5": "Using directive is not used by code and can be removed safely.",
@@ -1160,19 +1356,411 @@
 							"syntax": "Packages/C#/C#.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1230.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/MyAssets/Scripts/MRPM_Player.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2716,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2516,
+								2516
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2706,
+										2707
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										2009,
+										2010
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"is_init_dirty_state": false,
+							"oops":
+							{
+								"0,5": "Using directive is not used by code and can be removed safely.",
+								"1498,1502": "Redundant 'else' keyword",
+								"1693,1697": "Redundant 'else' keyword",
+								"1827,1828": "Lambda expression can be simplified to method group",
+								"1869,1887": "Parameter can be declared with base type",
+								"1904,1913": "Parameter can be IReadOnlyReactiveDictionary",
+								"26,31": "Using directive is not used by code and can be removed safely.",
+								"315,321": "Name should have prefix '_'. (Rule 'Fields').",
+								"385,392": "Name should have prefix '_'. (Rule 'Fields').",
+								"395,399": "Initializing field by default value is redundant",
+								"752,759": "Parameter can be IComparable",
+								"766,772": "Parameter can be IComparable",
+								"79,84": "Using directive is not used by code and can be removed safely."
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1120.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Assets/MyAssets/Scripts/MRPM_SceneSyncManager.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4683,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3852,
+								3852
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										3910,
+										3911
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										3197,
+										3198
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"is_init_dirty_state": false,
+							"oops":
+							{
+								"0,5": "Using directive is not used by code and can be removed safely.",
+								"1181,1198": "Can be converted to expression",
+								"2313,2321": "Parameter can be DictionaryAddEvent",
+								"2847,2855": "Parameter can be DictionaryAddEvent",
+								"3969,3970": "Assignment is redundant",
+								"4265,4273": "Parameter can be DictionaryAddEvent"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1768.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/MyAssets/Scripts/MRPM_HUDController.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 989,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								970,
+								970
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										979,
+										980
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										876,
+										877
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"is_init_dirty_state": false,
+							"oops":
+							{
+								"0,5": "Using directive is not used by code and can be removed safely.",
+								"26,31": "Using directive is not used by code and can be removed safely.",
+								"777,783": "Method 'Update' has the same with 'Start'",
+								"851,860": "Parameter can be IComparable",
+								"866,875": "Parameter can be IComparable"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 78.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 5,
 					"file": "Assets/MyAssets/Scripts/MRPM_PlayerAuthorization.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1484,
+						"buffer_size": 2426,
 						"regions":
 						{
 						},
@@ -1185,62 +1773,92 @@
 						],
 						"settings":
 						{
-							"oops":
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
 							{
-								"0,5": "Using directive is not used by code and can be removed safely.",
-								"282,294": "Convert to constant",
-								"329,346": "Convert to readonly"
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
 							},
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 3.0,
-						"translation.y": 96.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Assets/MyAssets/Scripts/MRPM_GeneralManager.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 847,
-						"regions":
-						{
-						},
-						"selection":
-						[
+							"bracket_highlighter.regions":
 							[
-								639,
-								457
-							]
-						],
-						"settings":
-						{
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"is_init_dirty_state": false,
 							"oops":
 							{
 								"0,5": "Using directive is not used by code and can be removed safely.",
-								"173,188": "Name should have prefix '_'. (Rule 'Fields').",
-								"202,211": "Name should have prefix '_'. (Rule 'Fields').",
-								"226,236": "'PORT_ROBOT' should start with a lower case letter. (Rule 'Fields')",
-								"257,270": "'PORT_OPERATOR' should start with a lower case letter. (Rule 'Fields')",
-								"291,303": "'PORT_MAINRCV' should start with a lower case letter. (Rule 'Fields')",
-								"327,343": "'ADDRESS_TO_ROBOT' should start with a lower case letter. (Rule 'Fields')",
-								"384,405": "'ADDRESS_TO_Main_SHOOT' should start with a lower case letter. (Rule 'Fields')",
-								"435,440": "The private field 'oscIn' is never assigned",
-								"450,456": "The private field 'oscOut' is never assigned",
-								"494,502": "Name should have prefix '_'. (Rule 'Fields').",
-								"736,742": "Method 'Update' has the same with 'Start'",
-								"766,779": "Method 'LoadMainLevel' can be made static."
+								"1298,1304": "Qualifier is redundant",
+								"1389,1405": "Can be converted to expression"
 							},
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 870.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,

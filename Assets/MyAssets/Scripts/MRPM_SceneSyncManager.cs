@@ -13,7 +13,7 @@ namespace MRPM
         public Transform _syncObjParent;
 
         OscIn oscIn;
-        public ReactiveDictionary<string, string> SceneVariables{ get; private set; }
+        public ReactiveDictionary<string, string> SceneVariables { get; private set; }
         MRPM_GeneralManager gm;
 
         static public MRPM_SceneSyncManager _instance;
@@ -54,11 +54,11 @@ namespace MRPM
         {
             oscIn.Unmap(ParseOscMessage);
         }
-    
+
         // Update is called once per frame
         void Update()
         {
-            
+
         }
 
         void ParseOscMessage(OscMessage oscMessage)
@@ -103,28 +103,33 @@ namespace MRPM
             }
         }
 
-        void SpawnRobot(DictionaryAddEvent<string,string> addEvent)
+        void SpawnRobot(DictionaryAddEvent<string, string> addEvent)
         {
             var addEventvalue = addEvent.Value.Split(new [] { '/' });
-            var robot = Instantiate(_robotPrefab, new Vector3(float.Parse(addEventvalue[0]), 0, float.Parse(addEventvalue[1]))
-                , Quaternion.Euler(0, float.Parse(addEventvalue[2]), 0), _syncObjParent);
+            //var robot = Instantiate(_robotPrefab, new Vector3(float.Parse(addEventvalue[0]), 0, float.Parse(addEventvalue[1])), Quaternion.Euler(0, float.Parse(addEventvalue[2]), 0), _syncObjParent);
             if (gm.myRobotID == addEvent.Key)
             {
+                //Instantiate my robot with isMine = true;
+                var robot = MRPM_Player.Instantiate(_robotPrefab, addEvent.Key, true, new Vector3(float.Parse(addEventvalue[0]), 0, float.Parse(addEventvalue[1])), Quaternion.Euler(0, float.Parse(addEventvalue[2]), 0), _syncObjParent);
                 //this is my robot so attach camera
-                robot.GetComponent<MRPM_Player>().isMine = true;
                 Camera.main.transform.parent = robot.transform;
                 Camera.main.transform.localPosition = new Vector3(0, 0.5f, 0);
                 Camera.main.transform.rotation = Quaternion.identity;
+                // connect HUD with this robot
+                MRPM_HUDController._instance._myPlayer = robot.GetComponent<MRPM_Player>();
             }
-            robot.GetComponent<MRPM_Player>().robotID = addEvent.Key;
+            else
+            {
+                var robot = MRPM_Player.Instantiate(_robotPrefab, addEvent.Key, false, new Vector3(float.Parse(addEventvalue[0]), 0, float.Parse(addEventvalue[1])), Quaternion.Euler(0, float.Parse(addEventvalue[2]), 0), _syncObjParent);
+            }
         }
-        
-        void SpawnBullet(DictionaryAddEvent<string,string> addEvent)
+
+        void SpawnBullet(DictionaryAddEvent<string, string> addEvent)
         {
             var addEventvalue = addEvent.Value.Split(new [] { '/' });
             var bullet = Instantiate(_bulletPrefab, new Vector3(float.Parse(addEventvalue[0]), 0, float.Parse(addEventvalue[1]))
-                , Quaternion.Euler(0, float.Parse(addEventvalue[2]), 0), _syncObjParent);
-            bullet.GetComponent<MRPM_Bullet>()._objectID =  addEvent.Key;
+                                 , Quaternion.Euler(0, float.Parse(addEventvalue[2]), 0), _syncObjParent);
+            bullet.GetComponent<MRPM_Bullet>()._objectID = addEvent.Key;
         }
     }
 

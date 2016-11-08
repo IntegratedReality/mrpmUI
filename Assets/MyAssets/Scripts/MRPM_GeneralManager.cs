@@ -18,9 +18,6 @@ public class MRPM_GeneralManager : MonoBehaviour {
 	public string ADDRESS_ACK = "/operator/ack";
 	public string ADDRESS_SYNC = "/main/toCtrlr/sync";
 
-	public OscIn _oscIn;
-	public OscOut _oscOut;
-
 	static public MRPM_GeneralManager _instance;
 	void Awake(){
 		if (_instance == null){

@@ -6,81 +6,104 @@ using UniRx;
 
 namespace MRPM
 {
-    public class MRPM_Player : MonoBehaviour
-    {
+public class MRPM_Player : MonoBehaviour
+{
+	[HeaderAttribute("Player's Info")]
+	[SerializeField]
+	[TooltipAttribute("True if this is the player object this UI attached to")] public bool isMine;
+	[SerializeField][TooltipAttribute("Robot ID")] public string robotID = null;
+	[SerializeField] string mySyncState;
 
-        [HeaderAttribute("Player's Info")]
-        [SerializeField]
-        [TooltipAttribute("True if this is the player object this UI attached to")] public bool isMine;
-        [SerializeField][TooltipAttribute("Robot ID")] public string robotID = null;
-        [SerializeField] string mySyncState;
+	[HeaderAttribute("Status List")]
+	ReactiveProperty<int> Energy;
+	ReactiveProperty<int> HitPoint;
+	ReactiveProperty<int> IsDead;
 
-        [HeaderAttribute("Status List")]
-        public ReactiveProperty<float> Energy;
-        public ReactiveProperty<float> HitPoint;
-        public ReactiveProperty<int> IsDead;
+	Vector3 positionVelocity;
+	Vector3 rotationVelocity;
+	MRPM_GeneralManager gm;
+	public ParticleSystem _deathEffect;
 
-        MRPM_GeneralManager gm;
-        public ParticleSystem _deathEffect;
+	public static GameObject Instantiate(GameObject prefab,  string robotID, bool isMine, Vector3 position, Quaternion rotation, Transform parent)
+	{
+		GameObject obj = Instantiate(prefab);
+		obj.GetComponent<MRPM_Player>().robotID = robotID;
+		obj.GetComponent<MRPM_Player>().isMine = isMine;
+		obj.transform.position = position;
+		obj.transform.rotation = rotation;
+		if (parent != null) {
+			obj.transform.parent = parent.transform;
+		}
+		return obj;
+	}
 
-        // Use this for initialization
-        void Start()
-        {
-            gm = MRPM_GeneralManager._instance;
-            Energy = new ReactiveProperty<float>();
-            HitPoint = new ReactiveProperty<float>();
-            IsDead = new ReactiveProperty<int>(0);
-            IsDead.Subscribe(
-                x =>
-                {
-                    if (x > 0)
-                    {
-                        StartCoroutine("DeathTimer");
-                    }
-                });
+	// Use this for initialization
+	void Start()
+	{
+		gm = MRPM_GeneralManager._instance;
+		Energy = new ReactiveProperty<int>(100);
+		HitPoint = new ReactiveProperty<int>(100);
+		IsDead = new ReactiveProperty<int>(0);
 
-            MRPM_SceneSyncManager._instance.SceneVariables
-            	.ObserveEveryValueChanged(x => x)
-        		.Subscribe(x => Sync(x)).AddTo(this);
-        }
+		HitPoint.ObserveEveryValueChanged(x => x.Value).Buffer(2)
+		.Subscribe(x =>
+		{
+			if (x[0] - x[1] > 0)
+			{
+				// regenerating
+			}
+			else
+			{
+				// damaged
+			}
+		});
 
-        //DeathTimer
-        IEnumerator DeathTimer()
-        {
-            _deathEffect.Play();
-            while (IsDead.Value > 0)
-            {
+		var isDeadStream = IsDead.ObserveEveryValueChanged(x => x.Value);
+		isDeadStream.Subscribe(
+		  x =>
+		{
+			if (x > 0)
+			{
+				//show death timer
 
-                yield return new WaitForSeconds(1);
-            }
-        }
+			}
+			else
+			{
+				//revive
 
-        // Update is called once per frame
-        void Update()
-        {
-        }
+			}
+		});
 
-        void Sync(ReactiveDictionary<string,string> syncState)
-        {
-        	if (robotID == null) return;
-            if (syncState.TryGetValue(robotID, out mySyncState))
-            {
-                var splitState = mySyncState.Split(new [] { '/' });
-                float x, z, rot, en, hp;
-                int intDead;
-                float.TryParse(splitState[0], out x);
-                float.TryParse(splitState[1], out z);
-                transform.position.Set(x, 0, z);
-                float.TryParse(splitState[2], out rot);
-                transform.rotation.eulerAngles.Set(0, rot, 0);
-                float.TryParse(splitState[3], out en);
-                Energy.Value = en;
-                float.TryParse(splitState[4], out hp);
-                HitPoint.Value = hp;
-                int.TryParse(splitState[5], out intDead);
-                IsDead.Value = intDead;
-            }
-        }
-    }
+		MRPM_SceneSyncManager._instance.SceneVariables
+		.ObserveEveryValueChanged(x => x)
+		.Subscribe(x => Sync(x)).AddTo(this);
+	}
+
+	void Sync(ReactiveDictionary<string, string> syncState)
+	{
+		if (robotID == null)
+			return;
+		if (syncState.TryGetValue(robotID, out mySyncState))
+		{
+			var splitState = mySyncState.Split(new [] { '/' });
+			float x, z, rot;
+			int intDead, en, hp;
+			//sync position smoothly
+			//transform.position.Set(x, 0, z);
+			float.TryParse(splitState[0], out x);
+			float.TryParse(splitState[1], out z);
+			transform.position = Vector3.SmoothDamp(transform.position, new Vector3(x, 0, z),  ref positionVelocity , Time.deltaTime);
+			float.TryParse(splitState[2], out rot);
+			// sync rotation smoothly
+			transform.rotation.eulerAngles.Set(0, rot, 0);
+			int.TryParse(splitState[3], out en);
+			Energy.Value = en;
+			int.TryParse(splitState[4], out hp);
+			HitPoint.Value = hp;
+			int.TryParse(splitState[5], out intDead);
+			IsDead.Value = intDead;
+		}
+	}
+}
 
 }

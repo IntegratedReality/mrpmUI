@@ -44,10 +44,10 @@ namespace MRPM
             }
             _authDataText.text = "Authorizing...";
             stream = authStream.Timeout(System.TimeSpan.FromSeconds(20)).Subscribe(
-            	x => 
+            	x =>
             	{
             		CheckAuthMessage(x);
-            	}, 
+            	},
             	ex =>
             	{
             		Debug.Log("timeout");
