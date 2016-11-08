@@ -81,7 +81,7 @@ public class MRPM_PlayerAuthorization : MonoBehaviour
         generalMagnager.myRobotID = robotID.ToString();
         // name resolve
         generalMagnager.myRobotHostName = robotHostName;
-        IPAddress temp;
+        IPAddress temp = null;
         var hostAddresses = Dns.GetHostAddresses(robotHostName);
         foreach (var ipAddress in hostAddresses) {
             if (ipAddress.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork) {
@@ -89,8 +89,8 @@ public class MRPM_PlayerAuthorization : MonoBehaviour
                 break;
             }
         }
-        generalMagnager.myRobotAddress =
-            _authDataText.text = "robotID: " + robotID + " robotHostName: " + robotHostName;
+        generalMagnager.myRobotAddress = temp.ToString();
+        _authDataText.text = "robotID: " + robotID + " robotHostName: " + robotHostName;
         _startButton.OnAuthorized();
         stream.Dispose();
     }

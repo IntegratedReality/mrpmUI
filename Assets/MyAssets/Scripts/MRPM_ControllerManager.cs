@@ -33,11 +33,11 @@ namespace MRPM
             gm = MRPM_GeneralManager._instance;
             if (_oscOutToMain)
             {
-                _oscOutToMain.Open(gm.PORT_MAINRCV, gm.mainHostName);
+                _oscOutToMain.Open(gm.PORT_MAINRCV, gm.mainHostAddress);
             }
             if (_oscOutToRobot)
             {
-                _oscOutToMain.Open(gm.PORT_ROBOT, gm.myRobotHostName);
+                _oscOutToRobot.Open(gm.PORT_ROBOT, gm.myRobotAddress);
             }
             robotID = gm.myRobotID;
         }
@@ -45,13 +45,14 @@ namespace MRPM
         // Update is called once per frame
         void Update()
         {
-            if (_oscOutToRobot != null)
-            {
-                _oscOutToRobot.Send(gm.ADDRESS_TO_ROBOT, RobotControlOrder());
-            }
             if (_oscOutToMain != null && isFire())
             {
                 _oscOutToMain.Send(gm.ADDRESS_TO_Main_SHOOT, robotID);
+            }
+            if (_oscOutToRobot != null)
+            {
+                int order = RobotControlOrder();
+                _oscOutToRobot.Send(gm.ADDRESS_TO_ROBOT, order);
             }
         }
 
@@ -59,11 +60,11 @@ namespace MRPM
         {
             if (_oscOutToMain)
             {
-                _oscOutToMain.Open(gm.PORT_MAINRCV, gm.mainHostName);
+                _oscOutToMain.Open(gm.PORT_MAINRCV, gm.mainHostAddress);
             }
             if (_oscOutToRobot)
             {
-                _oscOutToMain.Open(gm.PORT_ROBOT, gm.myRobotHostName);
+                _oscOutToMain.Open(gm.PORT_ROBOT, gm.myRobotAddress);
             }
             robotID = gm.myRobotID;
         }
