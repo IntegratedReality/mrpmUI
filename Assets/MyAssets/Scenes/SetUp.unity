@@ -580,7 +580,7 @@ MonoBehaviour:
   _filterDuplicates: 1
   _addTimeTagsToBundledMessages: 0
   _openOnAwake: 0
-  _dirtyMappings: 0
+  _dirtyMappings: 1
   _mappings: []
   _settingsFoldout: 1
   _mappingsFoldout: 1
@@ -790,6 +790,7 @@ GameObject:
   - component: {fileID: 1365647088}
   - component: {fileID: 1365647087}
   - component: {fileID: 1365647090}
+  - component: {fileID: 1365647091}
   m_Layer: 5
   m_Name: StartGameButton
   m_TagString: Untagged
@@ -912,6 +913,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e012981d2e9474df597f7207c1e28730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1365647091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1365647085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a83e4d41d3144efb843adad75b278d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _port: 8000
+  _mode: 0
+  _ipAddress: 127.0.0.1
+  _remoteStatus: 2
+  onAnyMessage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OscSimpl.OscMessageEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  _multicastLoopback: 1
+  _bundleMessagesOnEndOfFrame: 0
+  _openOnAwake: 0
+  _settingsFoldout: 0
+  _messagesFoldout: 0
 --- !u!1 &1387513405
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,7 +966,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRobotHostName: 
-  mainHostName: 
+  myRobotAddress: 
+  mainHostName: irworkstation.local
+  mainHostAddress: 
   myRobotID: 
   PORT_ROBOT: 8000
   PORT_OPERATOR: 8001
@@ -949,8 +977,6 @@ MonoBehaviour:
   ADDRESS_TO_Main_SHOOT: /operator/shot
   ADDRESS_ACK: /operator/ack
   ADDRESS_SYNC: /main/toCtrlr/sync
-  _oscIn: {fileID: 0}
-  _oscOut: {fileID: 0}
 --- !u!4 &1387513407
 Transform:
   m_ObjectHideFlags: 0

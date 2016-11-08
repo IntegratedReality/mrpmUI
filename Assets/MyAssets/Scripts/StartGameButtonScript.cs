@@ -19,11 +19,11 @@ public class StartGameButtonScript : MonoBehaviour
         startButton.interactable = false;
         oscOut = GetComponent<OscOut>();
     }
-    
+
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnAuthorized()
@@ -37,7 +37,8 @@ public class StartGameButtonScript : MonoBehaviour
         if (myRobotID != null)
         {
             Debug.Log("Send ACK");
-            oscOut.Send(_generalManager.ADDRESS_ACK, myRobotID);
+            oscOut.Open(_generalManager.PORT_MAINRCV, _generalManager.mainHostAddress);
+            oscOut.Send(_generalManager.ADDRESS_ACK, int.Parse(myRobotID));
         }
     }
 }

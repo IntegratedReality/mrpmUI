@@ -3,87 +3,98 @@ using UnityEngine;
 using UnityEngine.UI;
 using UniRx;
 using System;
+using System.Net;
 
 namespace MRPM
 {
 
-    [RequireComponent(typeof(OscIn), typeof(OscOut))]
-    public class MRPM_PlayerAuthorization : MonoBehaviour
+[RequireComponent(typeof(OscIn), typeof(OscOut))]
+public class MRPM_PlayerAuthorization : MonoBehaviour
+{
+    OscIn oscIn;
+    OscOut oscOut;
+    public Text _authDataText;
+
+    [HeaderAttribute("Auth Data Info")]
+    [SerializeField]
+    int robotID;
+    [SerializeField]
+    string robotHostName;
+
+    MRPM_GeneralManager generalMagnager;
+    public StartGameButtonScript _startButton;
+    UniRx.IObservable<OscMessage> authStream;
+    IDisposable stream;
+
+    // Use this for initialization
+    void Start()
     {
-        OscIn oscIn;
-        OscOut oscOut;
-        public Text _authDataText;
+        generalMagnager = MRPM_GeneralManager._instance;
+        oscIn = GetComponent<OscIn>();
+        oscOut = GetComponent<OscOut>();
+        authStream = oscIn.onAnyMessage.AsObservable();
+    }
 
-        [HeaderAttribute("Auth Data Info")]
-        [SerializeField]
-        string robotID;
-        [SerializeField]
-        string robotHostName;
-
-        MRPM_GeneralManager generalMagnager;
-        public StartGameButtonScript _startButton;
-        UniRx.IObservable<OscMessage> authStream;
-        IDisposable stream;
-
-        // Use this for initialization
-        void Start()
+    public void OnClick()
+    {
+        Debug.Log("AuthButtonClick");
+        if (!oscIn.isOpen)
         {
-            generalMagnager = MRPM_GeneralManager._instance;
-            oscIn = GetComponent<OscIn>();
-            oscOut = GetComponent<OscOut>();
-            authStream = oscIn.onAnyMessage.AsObservable();
+            oscIn.Open(generalMagnager.PORT_OPERATOR, null);
         }
-
-        public void OnClick()
+        _authDataText.text = "Authorizing...";
+        stream = authStream.Timeout(System.TimeSpan.FromSeconds(20)).Subscribe(
+                     x =>
         {
-            Debug.Log("AuthButtonClick");
-            if (!oscIn.isOpen)
-            {
-                oscIn.Open(generalMagnager.PORT_MAINRCV, null);
-                oscIn.Map("/main/toCtrlr/assign", CheckAuthMessage);
-            }
-            _authDataText.text = "Authorizing...";
-            stream = authStream.Timeout(System.TimeSpan.FromSeconds(20)).Subscribe(
-            	x =>
-            	{
-            		CheckAuthMessage(x);
-            	},
-            	ex =>
-            	{
-            		Debug.Log("timeout");
-            		_authDataText.text = "Timeout";
-            	}).AddTo(this);
-        }
-
-
-
-        // Update is called once per frame
-        void Update()
+            CheckAuthMessage(x);
+            Debug.Log("is receiving");
+        },
+        ex =>
         {
+            Debug.Log("timeout");
+            _authDataText.text = "Timeout";
+        }).AddTo(this);
+    }
 
-        }
 
-        public void CheckAuthMessage(OscMessage message)
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    public void CheckAuthMessage(OscMessage message)
+    {
+        //Show GUI
+        if (message.TryGet(0, out robotID) && message.TryGet(1, out robotHostName))
         {
-            //Show GUI
-            if (message.TryGet(0, out robotID) && message.TryGet(1, out robotHostName))
-            {
-                if (generalMagnager.mainHostName != null)
-                    OnAuthorized();
-            }
-        }
-
-        void OnAuthorized()
-        {
-            oscIn.Close();
-            oscOut.Open(generalMagnager.PORT_MAINRCV, generalMagnager.mainHostName);
-            generalMagnager.myRobotID = robotID;
-            generalMagnager.myRobotHostName = robotHostName;
-            _authDataText.text = "robotID: " + robotID + " robotHostName: " + robotHostName;
-            _startButton.OnAuthorized();
-            stream.Dispose();
+            if (generalMagnager.mainHostName != null)
+                OnAuthorized();
         }
     }
+
+    void OnAuthorized()
+    {
+        oscIn.Close();
+        oscOut.Open(generalMagnager.PORT_MAINRCV, generalMagnager.mainHostAddress);
+        generalMagnager.myRobotID = robotID.ToString();
+        // name resolve
+        generalMagnager.myRobotHostName = robotHostName;
+        IPAddress temp;
+        var hostAddresses = Dns.GetHostAddresses(robotHostName);
+        foreach (var ipAddress in hostAddresses) {
+            if (ipAddress.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork) {
+                temp = ipAddress;
+                break;
+            }
+        }
+        generalMagnager.myRobotAddress =
+            _authDataText.text = "robotID: " + robotID + " robotHostName: " + robotHostName;
+        _startButton.OnAuthorized();
+        stream.Dispose();
+    }
+}
 
 }
 
