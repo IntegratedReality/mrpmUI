@@ -52,6 +52,7 @@ namespace MRPM
             if (_oscOutToRobot != null)
             {
                 int order = RobotControlOrder();
+                Debug.Log(order);
                 _oscOutToRobot.Send(gm.ADDRESS_TO_ROBOT, order);
             }
         }
@@ -77,8 +78,20 @@ namespace MRPM
 
         int RobotControlOrder()
         {
-            int h = (int)Input.GetAxis("Horizontal") + 1;
-            int v = (int)Input.GetAxis("Vertical") + 1;
+            int h = 1;
+            int v = 1;
+            if (Input.GetKey(KeyCode.RightArrow) ){
+                h += 1;
+            }
+            if (Input.GetKey(KeyCode.LeftArrow) ){
+                h -= 1;
+            }
+            if (Input.GetKey(KeyCode.UpArrow) ){
+                v += 1;
+            }
+            if (Input.GetKey(KeyCode.DownArrow) ){
+                v -= 1;
+            }
             int op = h + v*3;
             return directionConvertArray[op];
         }
