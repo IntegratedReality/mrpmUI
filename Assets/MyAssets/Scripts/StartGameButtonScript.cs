@@ -33,12 +33,12 @@ public class StartGameButtonScript : MonoBehaviour
 
     public void SendACK()
     {
-        string myRobotID = _generalManager.myRobotID;
+        int myRobotID = _generalManager.myRobotID;
         if (myRobotID != null)
         {
             Debug.Log("Send ACK");
             oscOut.Open(_generalManager.PORT_MAINRCV, _generalManager.mainHostAddress);
-            oscOut.Send(_generalManager.ADDRESS_ACK, int.Parse(myRobotID));
+            oscOut.Send(_generalManager.ADDRESS_ACK, myRobotID);
         }
     }
 }

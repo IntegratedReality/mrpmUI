@@ -11,7 +11,7 @@ public class MRPM_Player : MonoBehaviour
 	[HeaderAttribute("Player's Info")]
 	[SerializeField]
 	[TooltipAttribute("True if this is the player object this UI attached to")] public bool isMine;
-	[SerializeField][TooltipAttribute("Robot ID")] public string robotID = null;
+	[SerializeField][TooltipAttribute("Robot ID")] public int robotID;
 	[SerializeField] string mySyncState;
 
 	[HeaderAttribute("Status List")]
@@ -24,7 +24,7 @@ public class MRPM_Player : MonoBehaviour
 	MRPM_GeneralManager gm;
 	public ParticleSystem _deathEffect;
 
-	public static GameObject Instantiate(GameObject prefab,  string robotID, bool isMine, Vector3 position, Quaternion rotation, Transform parent)
+	public static GameObject Instantiate(GameObject prefab,  int robotID, bool isMine, Vector3 position, Quaternion rotation, Transform parent)
 	{
 		GameObject obj = Instantiate(prefab);
 		obj.GetComponent<MRPM_Player>().robotID = robotID;
@@ -76,12 +76,16 @@ public class MRPM_Player : MonoBehaviour
 
 		MRPM_SceneSyncManager._instance.SceneVariables
 		.ObserveEveryValueChanged(x => x)
-		.Subscribe(x => Sync(x)).AddTo(this);
+		.Subscribe(x =>
+		{
+			Sync(x);
+		})
+		.AddTo(this);
 	}
 
-	void Sync(ReactiveDictionary<string, string> syncState)
+	void Sync(ReactiveDictionary<int, string> syncState)
 	{
-		if (robotID == null)
+		if (robotID%10 == 0)
 			return;
 		if (syncState.TryGetValue(robotID, out mySyncState))
 		{

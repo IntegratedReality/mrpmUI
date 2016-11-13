@@ -11,7 +11,7 @@ public class MRPM_GeneralManager : MonoBehaviour {
 	public string myRobotAddress = null;
 	public string mainHostName = "irworkstation.local";
 	public string mainHostAddress = null;
-	public string myRobotID = null;
+	public int myRobotID = 0;
 
 	public int PORT_ROBOT = 8000;
 	public int PORT_OPERATOR = 8001;

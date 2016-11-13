@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UniRx;
 using System;
@@ -43,7 +42,7 @@ public class MRPM_PlayerAuthorization : MonoBehaviour
             oscIn.Open(generalMagnager.PORT_OPERATOR, null);
         }
         _authDataText.text = "Authorizing...";
-        stream = authStream.Timeout(System.TimeSpan.FromSeconds(20)).Subscribe(
+        stream = authStream.Timeout(TimeSpan.FromSeconds(20)).Subscribe(
                      x =>
         {
             CheckAuthMessage(x);
@@ -78,18 +77,16 @@ public class MRPM_PlayerAuthorization : MonoBehaviour
     {
         oscIn.Close();
         oscOut.Open(generalMagnager.PORT_MAINRCV, generalMagnager.mainHostAddress);
-        generalMagnager.myRobotID = robotID.ToString();
+        generalMagnager.myRobotID = robotID;
         // name resolve
         generalMagnager.myRobotHostName = robotHostName;
-        IPAddress temp = null;
         var hostAddresses = Dns.GetHostAddresses(robotHostName);
         foreach (var ipAddress in hostAddresses) {
             if (ipAddress.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork) {
-                temp = ipAddress;
+                generalMagnager.myRobotAddress = ipAddress.ToString() ;
                 break;
             }
         }
-        generalMagnager.myRobotAddress = temp.ToString();
         _authDataText.text = "robotID: " + robotID + " robotHostName: " + robotHostName;
         _startButton.OnAuthorized();
         stream.Dispose();

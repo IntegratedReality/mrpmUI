@@ -13,7 +13,7 @@ namespace MRPM
         public Transform _syncObjParent;
 
         OscIn oscIn;
-        public ReactiveDictionary<string, string> SceneVariables { get; private set; }
+        public ReactiveDictionary<int, string> SceneVariables { get; private set; }
         MRPM_GeneralManager gm;
 
         static public MRPM_SceneSyncManager _instance;
@@ -36,7 +36,7 @@ namespace MRPM
             oscIn = GetComponent<OscIn>();
             oscIn.Open(gm.PORT_OPERATOR, null);
             oscIn.Map(gm.ADDRESS_SYNC, ParseOscMessage);
-            SceneVariables = new ReactiveDictionary<string, string>();
+            SceneVariables = new ReactiveDictionary<int, string>();
             //新しいオブジェクトを生成
             SceneVariables.ObserveAdd().Subscribe(x =>
                 {
@@ -71,7 +71,8 @@ namespace MRPM
             int kvCount = oscMessage.args.Count / 2;
             for (int i = 0; i < kvCount; i++)
             {
-                string objectID, syncValue;
+                int objectID = 0;
+                string syncValue = "";
                 if (oscMessage.TryGet(i, out objectID) && oscMessage.TryGet(i + 1, out syncValue))
                 {
                     SceneVariables.Add(objectID, syncValue);
@@ -83,9 +84,9 @@ namespace MRPM
             }
         }
 
-        void SpawnSyncedObject(DictionaryAddEvent<string, string> addEvent)
+        void SpawnSyncedObject(DictionaryAddEvent<int, string> addEvent)
         {
-            int keyInt = int.Parse(addEvent.Key);
+            int keyInt = addEvent.Key;
             if (keyInt == 90)
             {
                 //this is grobal info
@@ -103,7 +104,7 @@ namespace MRPM
             }
         }
 
-        void SpawnRobot(DictionaryAddEvent<string, string> addEvent)
+        void SpawnRobot(DictionaryAddEvent<int, string> addEvent)
         {
             var addEventvalue = addEvent.Value.Split(new [] { '/' });
             //var robot = Instantiate(_robotPrefab, new Vector3(float.Parse(addEventvalue[0]), 0, float.Parse(addEventvalue[1])), Quaternion.Euler(0, float.Parse(addEventvalue[2]), 0), _syncObjParent);
@@ -120,11 +121,11 @@ namespace MRPM
             }
             else
             {
-                var robot = MRPM_Player.Instantiate(_robotPrefab, addEvent.Key, false, new Vector3(float.Parse(addEventvalue[0]), 0, float.Parse(addEventvalue[1])), Quaternion.Euler(0, float.Parse(addEventvalue[2]), 0), _syncObjParent);
+                MRPM_Player.Instantiate(_robotPrefab, addEvent.Key, false, new Vector3(float.Parse(addEventvalue[0]), 0, float.Parse(addEventvalue[1])), Quaternion.Euler(0, float.Parse(addEventvalue[2]), 0), _syncObjParent);
             }
         }
 
-        void SpawnBullet(DictionaryAddEvent<string, string> addEvent)
+        void SpawnBullet(DictionaryAddEvent<int, string> addEvent)
         {
             var addEventvalue = addEvent.Value.Split(new [] { '/' });
             var bullet = Instantiate(_bulletPrefab, new Vector3(float.Parse(addEventvalue[0]), 0, float.Parse(addEventvalue[1]))
