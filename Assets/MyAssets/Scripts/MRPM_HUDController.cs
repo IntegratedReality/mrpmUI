@@ -8,7 +8,6 @@ namespace MRPM
 
     public class MRPM_HUDController : MonoBehaviour
     {
-        public MRPM_Player _myPlayer;
         public Text _deathTimerText;
         public Image _characterImage;
         public Slider _healthSlider;

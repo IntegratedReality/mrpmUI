@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.UI;
 using UniRx;
 
 namespace MRPM
@@ -23,8 +24,10 @@ public class MRPM_Player : MonoBehaviour
 	Vector3 rotationVelocity;
 	MRPM_GeneralManager gm;
 	public ParticleSystem _deathEffect;
+	public Slider _healthBar;
+	public MRPM_HUDController _hudController;
 
-	public static GameObject Instantiate(GameObject prefab,  int robotID, bool isMine, Vector3 position, Quaternion rotation, Transform parent)
+	public static GameObject Instantiate(GameObject prefab,  int robotID, bool isMine, Vector3 position, Quaternion rotation, Transform parent = null)
 	{
 		GameObject obj = Instantiate(prefab);
 		obj.GetComponent<MRPM_Player>().robotID = robotID;
@@ -51,11 +54,19 @@ public class MRPM_Player : MonoBehaviour
 			if (x[0] - x[1] > 0)
 			{
 				// regenerating
+				if (isMine){
+
+				}
 			}
 			else
 			{
 				// damaged
+				if (isMine){
+
+				}
 			}
+			//update health bar
+			_healthBar.value = x[0];
 		});
 
 		var isDeadStream = IsDead.ObserveEveryValueChanged(x => x.Value);
@@ -64,29 +75,45 @@ public class MRPM_Player : MonoBehaviour
 		{
 			if (x > 0)
 			{
-				//show death timer
-
+				if (isMine){
+					// show death timer
+					// show screen
+				}
 			}
 			else
 			{
-				//revive
-
+				// revive
+				// show revive effect
+				//
 			}
 		});
 
-		MRPM_SceneSyncManager._instance.SceneVariables
+		/*MRPM_SceneSyncManager._instance.SceneVariables
 		.ObserveEveryValueChanged(x => x)
 		.Subscribe(x =>
 		{
 			Sync(x);
 		})
+		.AddTo(this);*/
+
+		Observable.EveryUpdate()
+		.Subscribe(_ =>
+		{
+			Sync(MRPM_SceneSyncManager._instance.SceneVariables);
+		})
 		.AddTo(this);
+
+		if (isMine)
+		{
+			_hudController = MRPM_HUDController._instance;
+		}
 	}
 
 	void Sync(ReactiveDictionary<int, string> syncState)
 	{
-		if (robotID%10 == 0)
+		if (robotID%10 != 0){
 			return;
+		}
 		if (syncState.TryGetValue(robotID, out mySyncState))
 		{
 			var splitState = mySyncState.Split(new [] { '/' });

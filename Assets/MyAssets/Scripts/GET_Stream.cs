@@ -27,6 +27,7 @@ public class GET_Stream : MonoBehaviour {
 	}
 
 	void Start() {
+		_generalManager = MRPM_GeneralManager._instance;
 		url = "http://" + _generalManager.myRobotHostName + ":8080/?action=snapshot";
 		//url ="http://mrpmpi2.local:8080/?action=snapshot";
 		Debug.Log("Connect to " + url);

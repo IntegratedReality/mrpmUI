@@ -39,6 +39,7 @@ public class StartGameButtonScript : MonoBehaviour
             Debug.Log("Send ACK");
             oscOut.Open(_generalManager.PORT_MAINRCV, _generalManager.mainHostAddress);
             oscOut.Send(_generalManager.ADDRESS_ACK, myRobotID);
+            _generalManager.LoadMainLevel();
         }
     }
 }

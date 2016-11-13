@@ -69,17 +69,32 @@ namespace MRPM
                 return;
             }
             int kvCount = oscMessage.args.Count / 2;
-            for (int i = 0; i < kvCount; i++)
+            Debug.Log(kvCount);
+            for (int i = 0; i < kvCount ; i++)
             {
                 int objectID = 0;
-                string syncValue = "";
-                if (oscMessage.TryGet(i, out objectID) && oscMessage.TryGet(i + 1, out syncValue))
-                {
-                    SceneVariables.Add(objectID, syncValue);
-                }
-                else
-                {
+                string stringID;
+                string syncValue;
+                bool isIDreadable = oscMessage.TryGet(i * 2, out stringID);
+                bool isValueReadable = oscMessage.TryGet(i * 2 +1, out syncValue);
+                if (!isIDreadable){
                     Debug.LogWarning("Error Getting Data from OscMessage");
+                } else {
+                    objectID = int.Parse(stringID);
+                }
+                if (!isValueReadable){
+                    Debug.LogWarning("Error Getting Data from OscMessage");
+                }
+                if (isIDreadable && isValueReadable)
+                {
+                    if (!SceneVariables.ContainsKey(objectID))
+                    {
+                        SceneVariables.Add(objectID, syncValue);
+                    }
+                    else
+                    {
+                        SceneVariables[objectID] = syncValue;
+                    }
                 }
             }
         }
@@ -99,15 +114,14 @@ namespace MRPM
             }
             else
             {
-                //this is bullet's id
-                SpawnBullet(addEvent);
+                //this is object's id
+                SpawnObject(addEvent);
             }
         }
 
         void SpawnRobot(DictionaryAddEvent<int, string> addEvent)
         {
             var addEventvalue = addEvent.Value.Split(new [] { '/' });
-            //var robot = Instantiate(_robotPrefab, new Vector3(float.Parse(addEventvalue[0]), 0, float.Parse(addEventvalue[1])), Quaternion.Euler(0, float.Parse(addEventvalue[2]), 0), _syncObjParent);
             if (gm.myRobotID == addEvent.Key)
             {
                 //Instantiate my robot with isMine = true;
@@ -116,8 +130,6 @@ namespace MRPM
                 Camera.main.transform.parent = robot.transform;
                 Camera.main.transform.localPosition = new Vector3(0, 0.5f, 0);
                 Camera.main.transform.rotation = Quaternion.identity;
-                // connect HUD with this robot
-                MRPM_HUDController._instance._myPlayer = robot.GetComponent<MRPM_Player>();
             }
             else
             {
@@ -125,12 +137,18 @@ namespace MRPM
             }
         }
 
-        void SpawnBullet(DictionaryAddEvent<int, string> addEvent)
+        void SpawnObject(DictionaryAddEvent<int, string> addEvent)
         {
             var addEventvalue = addEvent.Value.Split(new [] { '/' });
-            var bullet = Instantiate(_bulletPrefab, new Vector3(float.Parse(addEventvalue[0]), 0, float.Parse(addEventvalue[1]))
-                                 , Quaternion.Euler(0, float.Parse(addEventvalue[2]), 0), _syncObjParent);
-            bullet.GetComponent<MRPM_Bullet>()._objectID = addEvent.Key;
+            if (gm.myRobotID == addEvent.Key)
+            {
+                //Instantiate my robot with isMine = true;
+                MRPM_SyncedObject.Instantiate(_bulletPrefab, addEvent.Key, true, new Vector3(float.Parse(addEventvalue[0]), 0, float.Parse(addEventvalue[1])), Quaternion.Euler(0, float.Parse(addEventvalue[2]), 0), _syncObjParent);
+            }
+            else
+            {
+                MRPM_SyncedObject.Instantiate(_bulletPrefab, addEvent.Key, false, new Vector3(float.Parse(addEventvalue[0]), 0, float.Parse(addEventvalue[1])), Quaternion.Euler(0, float.Parse(addEventvalue[2]), 0), _syncObjParent);
+            }
         }
     }
 
