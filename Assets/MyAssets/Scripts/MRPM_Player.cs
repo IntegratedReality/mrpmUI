@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 using UnityEngine.UI;
 using UniRx;
 
@@ -77,12 +76,18 @@ public class MRPM_Player : MonoBehaviour
 			{
 				if (isMine){
 					// show death timer
-					// show screen
+					_hudController.ShowDeathTimer(IsDead.Value);
 				}
+				_deathEffect.Play();
 			}
 			else
 			{
 				// revive
+				if (isMine)
+				{
+					// remove death screen
+					_hudController.ShowDeathTimer(IsDead.Value);
+				}
 				// show revive effect
 				//
 			}

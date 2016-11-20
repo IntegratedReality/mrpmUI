@@ -969,7 +969,7 @@ MonoBehaviour:
   myRobotAddress: 
   mainHostName: irworkstation.local
   mainHostAddress: 
-  myRobotID: 
+  myRobotID: 0
   PORT_ROBOT: 8000
   PORT_OPERATOR: 8001
   PORT_MAINRCV: 8000

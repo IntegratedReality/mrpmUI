@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"pla",
+				"Play()\tvoid"
+			],
+			[
+				"isd",
+				"IsDead\tReactiveProperty<int>"
+			],
+			[
+				"update",
+				"UpdateHealthSlider(int currentHp, int maxHealth)\tvoid"
+			],
+			[
+				"tr",
+				"true\ttrue"
+			],
+			[
+				"_dea",
+				"_deathScreen\tImage"
+			],
+			[
+				"isA",
+				"IsActive()\tbool"
+			],
+			[
+				"isa",
+				"IsActive()\tbool"
+			],
+			[
 				"stri",
 				"stringID\tstring"
 			],
@@ -237,10 +265,6 @@
 			],
 			[
 				"Play",
-				"PlayerPrefs\tPlayerPrefs"
-			],
-			[
-				"pla",
 				"PlayerPrefs\tPlayerPrefs"
 			],
 			[
@@ -490,35 +514,29 @@
 			[
 				"sett",
 				"PhotonServerSettings\tServerSettings"
-			],
-			[
-				"Ne",
-				"NetworkedPlayer.cs"
-			],
-			[
-				"Instantiate",
-				"Instantiate(string prefabName, Vector3 position, Quaternion rotation, int group)\tGameObject"
-			],
-			[
-				"Photon",
-				"PhotonNetwork\tPhotonNetwork"
-			],
-			[
-				"ve",
-				"VRVoiceChatDemo.sln"
-			],
-			[
-				"ma",
-				"Max(int a, int b)\tint"
-			],
-			[
-				"digita",
-				"digitalWrite\tArduino digitalWrite"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "Assets/MyAssets/Scripts/MRPM_HUDController.cs",
+			"settings":
+			{
+				"buffer_size": 1424,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/MyAssets/Scripts/MRPM_Player.cs",
+			"settings":
+			{
+				"buffer_size": 3342,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -1077,13 +1095,271 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Assets/MyAssets/Scripts/MRPM_HUDController.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1424,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								880,
+								880
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1420,
+										1421
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										176,
+										177
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"oops":
+							{
+								"0,5": "Using directive is not used by code and can be removed safely.",
+								"26,31": "Using directive is not used by code and can be removed safely.",
+								"925,934": "Parameter can be IComparable",
+								"940,949": "Parameter can be IComparable"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 130.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		},
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 1,
+					"file": "Assets/MyAssets/Scripts/MRPM_Player.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3342,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2032,
+								2032
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2086,
+										2087
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										2002,
+										2003
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"oops":
+							{
+								"0,5": "Using directive is not used by code and can be removed safely.",
+								"2330,2334": "Can be converted to expression",
+								"2493,2511": "Parameter can be declared with base type",
+								"2525,2534": "Parameter can be IReadOnlyReactiveDictionary",
+								"26,31": "Using directive is not used by code and can be removed safely.",
+								"318,324": "Name should have prefix '_'. (Rule 'Fields').",
+								"385,392": "Name should have prefix '_'. (Rule 'Fields').",
+								"812,819": "Parameter can be IComparable",
+								"826,832": "Parameter can be IComparable"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1218.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
